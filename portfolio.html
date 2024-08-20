@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<style>
+    .area-portfolio {
+        padding:80px 0;
+    }
+    .area-portfolio .box-title {
+        padding-bottom:40px; margin-bottom:20px;
+        border-bottom:2px solid #474747;
+    }
+    .area-portfolio .box-title .title {
+        margin-bottom:10px;
+        font-size: 36px;
+        font-weight: 700;
+        color:#fff;
+    }
+    .area-portfolio .box-title .body {
+        font-size: 18px;
+        font-weight: 400;
+        color:#fff;
+    }
+    .area-portfolio .boxes {
+        display: flex;
+        flex-wrap:wrap;
+        margin:-8px;
+    }
+    .area-portfolio .boxes .box-wrap {
+        width: 33.33%;
+        padding:8px;
+    }
+    .area-portfolio .boxes .box-wrap .box {
+        position: relative;
+        border-radius: 10px;
+        overflow:hidden;
+    }
+    .area-portfolio .boxes .box-wrap .box .content {
+        padding:30px;
+        position: absolute; top:0; left:0;
+        z-index:1;
+    }
+    .area-portfolio .boxes .box-wrap .box .content .title {
+        margin-bottom:15px;
+        font-size: 20px;
+        font-weight: 700;
+        color:#FFE500;
+    }
+    .area-portfolio .boxes .box-wrap .box .content .body {
+        font-size:18px; font-weight:700; line-height:22px;
+        color:#fff;
+    }
+    .area-portfolio .boxes .box-wrap .box:after {
+        content:""; width:100%; height:100%;
+        position: absolute; top:0; left:0;
+        opacity: 0.6;
+        background: linear-gradient(180deg, #191919 0%, rgba(25, 25, 25, 0.00) 136.97%);
+
+    }
+    .area-portfolio .boxes .box-wrap .box .m-ratioBox-wrap {
+        padding-top:100%;
+    }
+
+    @media screen and (max-width:1200px) {
+        .area-portfolio .boxes .box-wrap {
+            width: 100%;
+        }
+        .area-portfolio .boxes .box-wrap .box .content .title {
+            margin-bottom:10px;
+        }
+        .area-portfolio .box-title {
+            padding-bottom:20px;
+        }
+        .area-portfolio .box-title .title {
+            margin-bottom:4px;
+            font-size:28px;
+        }
+        .area-portfolio .box-title .body {
+            font-size:16px;
+        }
+        .area-portfolio .boxes .box-wrap .box .m-ratioBox-wrap {
+            padding-top:90%;
+        }
+    }
+</style>
+<body>
+    <div id="header"></div>
+
+    <div class="contents-wrap">
+        <div class="area-portfolio">
+            <div class="wrap">
+                <div class="box-title">
+                    <h3 class="title">포트폴리오</h3>
+                    <p class="body">글천개 콘텐츠의 성공 사례를 직접 확인해보세요</p>
+                </div>
+
+                <div class="boxes">
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-wrap">
+                        <div class="box">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
+
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">성공사례</h3>
+                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        new Swiper(".swiper-container", {
+            slidesPerView: "3",
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+
+        new Swiper(".swiper-container1", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+
+        new Swiper(".swiper-container2", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+*:focus{
+    outline : none;
+}
+*{
+    -webkit - tap - highlight - color: rgba(0,0,0,0);
+}
+
+
+@keyframes fadeInUp {
+    0 % {
+        opacity: 0;
+        transform: translate3d(0, 100 %, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        left: -30%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0px;
+        transform: translateZ(0);
+    }
+}
+
+.moveLogo {
+    position: relative;
+    animation: fadeInUp 2s;
+}
+
+.moveLogo2 {
+    position: relative;
+    animation: fadeInLeft 2s;
+}
+
+/* 네비바 */
+.nav_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    /* max-width: 1920px; */
+    z-index: 10;
+}
+
+
+.nav-link {
+    color: #fff !important;
+    opacity: 0.3;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    opacity: 1;
+}
+
+/* 헤더 아이콘 스타일 */
+header .bi-heart-fill {
+    font - size: 25px;
+    line-height: 25px;
+    transition-duration: 0.5s;
+}
+
+.bi-person-fill {
+    font - size: 30px;
+    line-height: 30px;
+    transition-duration: 0.5s;
+}
+
+header .bi-person-fill:hover,
+header .bi-heart-fill:hover {
+    color: #444;
+}
+
+.ham-con .bi-search {
+    width: 50px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #777;
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 1px solid #444;
+    border-left: 0px;
+
+}
+
+.ham-con .bi-caret-up-fill,
+.ham-con .bi-caret-down-fill {
+    color: #444;
+}
+
+/* 햄버거 버튼 스타일*/
+.menu-trigger {
+    margin: 10px 0px;
+}
+
+.menu-trigger:hover span:nth-of-type(1) {
+    background - color: #fff;
+}
+
+.menu-trigger:hover span:nth-of-type(2) {
+    background - color: #fff;
+}
+
+.menu-trigger:hover span:nth-of-type(3) {
+    background - color: #fff;
+}
+
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 11px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+/* 햄버거 버튼 이벤트 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+    -webkit - transform: translateY (10px) rotate (-45deg);
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+    -webkit - transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
+}
+
+/* 햄버거 메뉴 디자인 */
+.ham-con {
+    width: 50%;
+    /* height: 1000px; */
+    height: -webkit-fill-available;
+    background-color: #131313;
+    position: fixed;
+    /* position: absolute; */
+    overflow: auto;
+    top: 79px;
+    right: -20%;
+    color: #505050;
+    z-index: -99;
+    opacity: 0;
+}
+
+.hp_mt86 {
+    margin-top: 86px !important;
+}
+
+.search-con {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.search-con input {
+    width: 70%;
+    height: 100%;
+    float: left;
+    line-height: 50px;
+    border: 1px solid black;
+}
+
+.ham-menu ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ham-menu ul.ham-top-menu li {
+    position: relative;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.ham-menu ul.ham-top-menu li:first-child {
+    padding - top: 0 !important;
+}
+
+/* .ham-menu ul.ham-top-menu li:last-child{
+padding - bottom: 0 !important;
+} */
+
+.ham-menu ul.ham-top-menu li:nth-child(even) {
+    padding: 0 !important;
+}
+
+.lineBt {
+    width: 60px;
+    height: 2px;
+    background: #282828;
+    margin: auto;
+}
+
+.ham-menu ul.ham-top-menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    /* text-indent: 20px; */
+    color: #fff;
+    text-decoration: none;
+}
+
+.ham-menu ul.ham-top-menu li a:hover {
+    background: #eee;
+}
+
+.ham-menu ul.ham-top-menu li .ham-sub-menu a {
+    position: relative;
+    /* float: left; */
+    display: block;
+    width: 100%;
+    z-index: 99;
+    /* width: 30%; */
+    margin: auto;
+}
+
+.ham-menu ul.ham-top-menu li .ham-sub-menu a:hover {
+    background: #444;
+    color: #fff;
+}
+
+.navLogo {
+    background: url("https://novaflo.s3.ap-northeast-2.amazonaws.com/images/navImg.png") no-repeat center center;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+}
+
+.navW70p {
+    width: 80%;
+}
+
+.hp_jcL {
+    justify - content: left !important;
+    flex-wrap: wrap;
+}
+
+.hp_jcC {
+    justify - content: center !important;
+    flex-wrap: wrap;
+}
+
+/* 전체 미디어쿼리 */
+.M_txt_box01,
+.M_imgAll,
+.M_txt_box03,
+.M_img5_01,
+.M_btnTtl,
+.M_dti {
+    display: none;
+}
+
+
+/* pc */
+@media screen and (min-width:992px) {
+    #header_content{
+        width : 1320px;
+        margin : 0 auto;
+        padding : 0.5rem 0rem;
+    }
+
+    #header_content .logo{
+        padding-top : 0.5rem!important;
+        padding-bottom : 0.5rem!important;
+    }
+
+    .ham-btn {
+        display: none !important;
+    }
+
+    .ml-auto {
+        margin-left: unset !important;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+    }
+
+    .navW70p {
+        justify-content: flex-end !important;
+        width: 60% !important;
+    }
+
+    .right-nav {
+        width: 40% !important;
+        text-align: end !important;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .ham-con {
+        width: 100%;
+    }
+
+    .M_txt_box01,
+    .M_imgAll,
+    .M_txt_box03,
+    .M_btnTtl,
+    .M_dti {
+        display: block;
+    }
+
+    .Pc_txt_box01,
+    .Pc_imgAll,
+    .Pc_txt_box03,
+    .Pc_img5_01,
+    .Pc_btnTtl,
+    .Pc_dti {
+        display: none;
+    }
+}
+
+/* 네비바 끝 */
+
+/* footer */
+.footer_bg{
+    background: #1A1A1A;
+}
+.footer_wrapper {
+    width: 100%;
+    height: 420px;
+    background: #1A1A1A;
+    /* max-width: 1920px; */
+    margin: auto;
+}
+
+.footer_box {
+    padding - top: 90px;
+    width : 1320px;
+    margin : 0 auto;
+}
+
+
+.footerLogo {
+    background: url("https://novaflo.s3.ap-northeast-2.amazonaws.com/images/footerLogo.png") no-repeat center center;
+    background-size: cover;
+    width: 108px;
+    height: 67px;
+}
+
+.footer_txt01 {
+    font - weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.footer_txt02 {
+    font - weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.footer_line {
+    width: 1px;
+    height: 10px;
+    background: #fff;
+    margin: 0 14px;
+}
+
+.footer_txt02 a,
+.footer_inner a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* footer */
+/* pc */
+@media screen and (min-width:992px) {}
+
+/* tablet */
+@media screen and (max-width:992px) {}
+
+/* mobile */
+@media screen and (max-width:500px) {
+    .footer_box {
+        padding: 60px 14px 80px;
+        margin : 0;
+        width : 100%;
+    }
+    .M_mb30 {
+        margin-bottom: 30px !important;
+    }
+
+    .footer_txt01,
+    .footer_txt02 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

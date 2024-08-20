@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서비스</title>
+    <link rel="stylesheet" type="text/css" href="css/olly.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<style>
+    .area-service {
+
+    }
+    .area-service .section-intro {
+        padding-top:200px; padding-bottom:130px;
+        /*background:url('./imgs/base-service.png') no-repeat; background-size:cover; background-position:center;*/
+        background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be40.png') no-repeat; background-size:cover; background-position:center;
+    }
+    .area-service .section-intro .wrap {
+
+    }
+    .area-service .section-intro .wrap > .title {
+        margin-bottom:80px;
+        font-size: 36px; text-align: center;
+        font-weight: 400;
+        line-height: 50px; /* 122.222% */
+        color:#fff;
+    }
+    .area-service .section-intro .wrap > .title * {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 50px; /* 122.222% */
+    }
+    .area-service .section-intro .wrap > .title .point {
+        font-weight:700;
+    }
+    .area-service .section-intro .boxes {
+        display: flex; align-items: center; gap:12px;
+    }
+    .area-service .section-intro .boxes .deco {}
+    .area-service .section-intro .boxes .box {
+        display: flex; align-items: center; justify-content: center; flex-wrap:wrap;
+        width:196px; height:196px;
+        text-align: center;
+        background-color:#191919; border-radius:100%;
+    }
+    .area-service .section-intro .boxes .box img {
+        display: block; margin:0 auto; margin-bottom:15px;
+    }
+    .area-service .section-intro .boxes .box .title {
+        font-size: 20px;font-style: normal;font-weight: 700; color:#fff;
+    }
+    .area-service .section-contents {
+        margin-top:60px; margin-bottom:100px;
+    }
+    .area-service .section-contents .box-content:last-of-type {
+        margin-bottom:0;
+    }
+    .area-service .section-contents .box-content {
+        display: flex; align-items: flex-end; gap:50px;
+        margin-bottom:50px;
+    }
+    .area-service .section-contents .box-content .m-ratioBox-wrap {
+        width:570px; padding-top:400px;
+        border-radius:10px;
+    }
+    .area-service .section-contents .box-content .content {
+        flex:auto;
+    }
+    .area-service .section-contents .box-content .content .title {
+        margin-bottom:40px;
+        font-size: 40px;
+        font-weight: 700;
+        color:#fff;
+    }
+    .area-service .section-contents .box-content .content .title .point {
+        font-size: 40px;
+        font-weight: 700;
+        color:#fff;
+    }
+    .area-service .section-contents .box-content .content .box-body {
+        padding:40px 30px;
+        font-size: 24px; line-height:36px;
+        font-style: normal;
+        background-color:#292929; border-radius:10px;
+        color:#fff;
+    }
+    .area-service .section-contents .box-content .content .box-body .point {
+        font-size: 24px;
+        font-style: normal; line-height:36px;
+        font-weight: 700;
+    }
+    .area-service .section-contents .box-content:nth-child(2n) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    .area-service .section-company {}
+    .area-service .section-company .title {
+        margin-bottom:80px;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; /* 120% */
+        color:#fff;
+        text-align: center;
+    }
+    .area-service .section-company .title .point {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; /* 120% */
+    }
+    .area-service .section-company .swiper {
+        margin-left:-20px; margin-bottom:80px;
+    }
+    .area-service .section-company .swiper .swiper-slide {
+        display: flex; align-items: center; justify-content: center;
+        width: 180px; height:72px;
+        font-size:20px; font-weight:700; color:#fff;
+        background-color:rgba(255, 229, 0, 0.20); border-radius:10px;
+
+    }
+    .area-service .section-marketing {
+        padding-bottom:170px;
+    }
+    .area-service .section-marketing .title {
+        margin-bottom:60px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px; /* 122.222% */
+        color:#fff; text-align: center;
+    }
+    .area-service .section-marketing .title .point {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px; /* 122.222% */
+    }
+    .area-service .section-marketing .btn {
+        display: flex; align-items: center; justify-content: center;
+        width:376px; height:80px;
+        margin:0 auto;
+        font-size: 22px;
+        font-weight: 700;
+        border-radius:100px; color:#fff;
+        background: linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
+    }
+    @media screen and (max-width:1200px) {
+        .area-service .section-intro {
+            padding-top:80px; padding-bottom:80px;
+        }
+        .area-service .section-intro .wrap > .title {
+            margin-bottom:50px;
+            font-size:28px; line-height:34px;
+            word-break: keep-all;
+        }
+        .area-service .section-intro .wrap > .title .point {
+            font-size:28px; line-height:34px;
+            word-break: keep-all;
+        }
+        .area-service .section-intro .wrap > .title .primary {
+            display: block;
+            margin-top:20px;
+            font-size:28px; line-height:34px;
+            word-break: keep-all;
+        }
+        .area-service .section-intro .boxes {
+            flex-wrap:wrap; justify-content: center;
+        }
+        .area-service .section-intro .boxes .box {
+            width: auto; height:auto;
+            border-radius:50px;
+        }
+        .area-service .section-intro .boxes .box img {
+            width:26px;
+            margin:0; margin-right:20px;
+        }
+        .area-service .section-intro .boxes .box .title {
+            font-size:16px;
+        }
+        .area-service .section-intro .boxes .box-inner {
+            display: flex; align-items: center; justify-content: center;
+            width:200px; height:60px;
+        }
+        .area-service .section-intro .boxes .box-deco {
+            width: 100%;
+            text-align: center;
+        }
+        .area-service .section-intro .boxes .deco {
+            transform: rotate(90deg);
+        }
+        .area-service .section-contents {
+            margin-bottom:90px;
+        }
+        .area-service .section-contents .box-content {
+            gap:30px;
+            flex-wrap:wrap;
+        }
+        .area-service .section-contents .box-content .m-ratioBox-wrap {
+            width:100%; padding-top:70%;
+        }
+        .area-service .section-contents .box-content .content .title {
+            margin-bottom:30px;
+            font-size:30px; text-align: left;
+        }
+        .area-service .section-contents .box-content .content .title .point {
+            font-size:30px;
+        }
+        .area-service .section-contents .box-content .content .box-body {
+            padding:30px 20px;
+            font-size:20px; line-height:28px; text-align: left; word-break: keep-all;
+        }
+        .area-service .section-contents .box-content .content .box-body .point {
+            font-size:20px; line-height:28px; word-break: keep-all;
+        }
+        .area-service .section-company .title {
+            margin-bottom:50px;
+            font-size:30px;
+            line-height: 34px
+        }
+        .area-service .section-company .title .point {
+            font-size:30px;
+            line-height: 34px
+        }
+        .area-service .section-company .swiper-container2 {
+            margin-top:10px;
+        }
+        .area-service .section-company .swiper .swiper-slide {
+            width:100px; height:48px;
+            font-size:16px;
+        }
+        .area-service .section-marketing .title {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 34px; /* 121.429% */ word-break: keep-all;
+        }
+        .area-service .section-marketing .title .point {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 34px; /* 121.429% */
+            word-break: keep-all;
+        }
+        .area-service .section-marketing .btn {
+            width: 184px; height:50px;
+            font-size:18px;
+        }
+    }
+</style>
+<body>
+    <div id="header"></div>
+
+    <div class="contents-wrap">
+        <div class="area-service">
+            <section class="section-intro">
+                <div class="wrap">
+                    <h3 class="title">
+                        여러분을 <span class="point">업계 선두</span>로 브랜딩해드리는
+                        <br/><span class="primary">글천개 콘텐츠만의 <br class="mobile"/><span class="point">풀케어 서비스</span></span>
+                    </h3>
+
+                    <div class="boxes">
+                        <div class="box">
+                            <div class="box-inner">
+<!--                                <img src="./imgs/icon-service1.png" alt="">-->
+                                <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be43.png" alt="">
+
+                                <h3 class="title">기획</h3>
+                            </div>
+                        </div>
+
+                        <div class="box-deco">
+<!--                            <img src="./imgs/angleRight-white.png" alt="" class="deco">-->
+                            <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be50.png" alt="" class="deco">
+                        </div>
+
+                        <div class="box">
+                            <div class="box-inner">
+<!--                                <img src="./imgs/icon-service2.png" alt="">-->
+                                <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be44.png" alt="">
+
+                                <h3 class="title">촬영</h3>
+                            </div>
+                        </div>
+
+                        <div class="box-deco">
+<!--                            <img src="./imgs/angleRight-white.png" alt="" class="deco">-->
+                            <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be50.png" alt="" class="deco">
+                        </div>
+
+                        <div class="box">
+                            <div class="box-inner">
+<!--                                <img src="./imgs/icon-service3.png" alt="">-->
+                                <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be45.png" alt="">
+
+                                <h3 class="title">편집</h3>
+                            </div>
+                        </div>
+
+                        <div class="box-deco">
+<!--                            <img src="./imgs/angleRight-white.png" alt="" class="deco">-->
+                            <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be50.png" alt="" class="deco">
+                        </div>
+
+                        <div class="box">
+                            <div class="box-inner">
+<!--                                <img src="./imgs/icon-service4.png" alt="">-->
+                                <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be46.png" alt="">
+
+                                <h3 class="title">최종선택</h3>
+                            </div>
+                        </div>
+
+                        <div class="box-deco">
+<!--                            <img src="./imgs/angleRight-white.png" alt="" class="deco">-->
+                            <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be50.png" alt="" class="deco">
+                        </div>
+
+                        <div class="box">
+                            <div class="box-inner">
+<!--                                <img src="./imgs/icon-service5.png" alt="">-->
+                                <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be47.png" alt="">
+
+                                <h3 class="title">업로드</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-contents">
+                <div class="wrap">
+                    <div class="box-content">
+                        <div class="m-ratioBox-wrap">
+                            <div class="m-ratioBox" style="background-image:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be4b.png')">
+<!--                            <div class="m-ratioBox" style="background-image:url('./imgs/thumb-service1.png')">-->
+
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">
+                                프리미엄 브랜딩 영상
+                                <br/><span class="point primary">풀케어 서비스</span>
+                            </h3>
+
+                            <div class="box-body">
+                                <span class="point primary">비교 불가!</span>
+                                <div class="mt10 mobile"></div>
+                                <br class="pc"/>당신을 업계 선두로 <br class="mobile"/>탈바꿈 시켜드리는
+                                <div class="mt10 mobile"></div>
+                                <br class="pc"/>강력한 영상 브랜딩을 <br class="mobile"/>경험해보세요
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-content">
+                        <div class="m-ratioBox-wrap">
+<!--                            <div class="m-ratioBox" style="background-image:url('./imgs/thumb-service2.png')">-->
+                            <div class="m-ratioBox" style="background-image:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be4c.png')">
+
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">
+                                <span class="point primary">고객의 니즈</span>를
+                                <br/>확실히 아는 전문가
+                            </h3>
+
+                            <div class="box-body">
+                                <span class="point primary">유튜브 생태계</span>를 이해하는
+                                <br class="pc"/><div class="mt10 mobile"></div><span class="point primary">기획자, 편집자 군단</span>이
+                                <br class="pc"/><div class="mt10 mobile"></div>고객의 니즈를 정확히 파악하고 적용해드립니다
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-content">
+                        <div class="m-ratioBox-wrap">
+<!--                            <div class="m-ratioBox" style="background-image:url('./imgs/thumb-service3.png')">-->
+                            <div class="m-ratioBox" style="background-image:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be4d.png')">
+
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">
+                                오직 <span class="point primary">실력</span>으로
+                                <br/>승부하는 전문가
+                            </h3>
+
+                            <div class="box-body">
+                                실력으로 증명합니다!
+                                <br class="pc"/><div class="mt10 mobile"></div><span class="point primary">메이저 방송사 출신 PD, 기획자</span> 군단
+                                <br class="pc"/><div class="mt10 mobile"></div><span class="point primary">메이저 방송사 출신 작가 군단</span>이 함께합니다
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-content">
+                        <div class="m-ratioBox-wrap">
+<!--                            <div class="m-ratioBox" style="background-image:url('./imgs/thumb-service4.png')">-->
+                            <div class="m-ratioBox" style="background-image:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bded8f8be4e.png')">
+
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3 class="title">
+                                <span class="point primary">프리미엄</span>
+                                <br/>홈페이지 제작
+                            </h3>
+
+                            <div class="box-body">
+                                <span class="point primary">제품 홍보</span>를 위한 브랜드 홈페이지부터
+                                <br class="pc"/><div class="mt10 mobile"></div><span class="point primary">쇼핑몰, 교육, 예약 서비스 등</span> 다양한 기능을 바탕으로
+                                <br class="pc"/><div class="mt10 mobile"></div>더 강력한 브랜딩을 구축해드립니다
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-company">
+                <div class="wrap">
+                    <h3 class="title">
+                        <span class="point primary">어떤 기업</span>도
+                        <br/><span class="point primary">어떤 업종</span>도
+                        <br/>거뜬하게
+                    </h3>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-container pc">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                제조업
+                            </div>
+                            <div class="swiper-slide">
+                                소상공인
+                            </div>
+                            <div class="swiper-slide">
+                                법무법인
+                            </div>
+                            <div class="swiper-slide">
+                                병원
+                            </div>
+                            <div class="swiper-slide">
+                                약국
+                            </div>
+                            <div class="swiper-slide">
+                                대기업
+                            </div>
+                            <div class="swiper-slide">
+                                중견기업
+                            </div>
+                            <div class="swiper-slide">
+                                중소기업
+                            </div>
+                            <div class="swiper-slide">
+                                1인 기업
+                            </div>
+                            <div class="swiper-slide">
+                                자영업
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-container1 mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                대기업
+                            </div>
+                            <div class="swiper-slide">
+                                중견기업
+                            </div>
+                            <div class="swiper-slide">
+                                중소기업
+                            </div>
+                            <div class="swiper-slide">
+                                1인 기업
+                            </div>
+                            <div class="swiper-slide">
+                                자영업
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-container2 mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                제조업
+                            </div>
+                            <div class="swiper-slide">
+                                소상공인
+                            </div>
+                            <div class="swiper-slide">
+                                법무법인
+                            </div>
+                            <div class="swiper-slide">
+                                병원
+                            </div>
+                            <div class="swiper-slide">
+                                약국
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-marketing">
+                <div class="wrap">
+                    <h3 class="title">
+                        <span class="point primary">더 빠르고</span>
+                        <br/><span class="point primary">더 센 마케팅 전략</span>이 필요하다면?
+                    </h3>
+
+                    <a href="/board/list.php?M2_IDX=32971" class="btn">성공사례 보기</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        new Swiper(".swiper-container", {
+            slidesPerView: "5",
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+
+        new Swiper(".swiper-container1", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+
+        new Swiper(".swiper-container2", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+        })
+    </script>
+</body>
+</html>
