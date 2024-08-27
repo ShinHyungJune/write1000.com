@@ -1,4 +1,7 @@
 /* 이 코드는 올리용 */
+.contents-wrap {
+    margin-top:0 !important;
+}
 .content_wrap2 {
     max-width: none !important;
 }
@@ -10,6 +13,24 @@
 }
 .cls_sub_bg {
     background-color:transparent;
+}
+.content_wrap2 .data_ct {
+    margin:0 auto;
+    padding-top:120px;
+    width:100%;
+    max-width:1200px;
+}
+.content_wrap2 .content.sub_content .date {color:#fff;}
+.content_wrap2 .content.sub_content .tit {color:#fff;}
+.content_wrap2 .content.sub_content .expl {
+    min-height:300px;
+    padding:20px;
+    background-color:#fff;
+}
+@media screen and (max-width:1200px) {
+    .content_wrap2 .data_ct {
+        padding:0 20px;
+    }
 }
 /* 이 코드는 올리용 종료 */
 
@@ -309,5 +330,4 @@ html, body {
         display: none;
     }
 }
-
 

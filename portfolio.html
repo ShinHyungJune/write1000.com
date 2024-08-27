@@ -12,10 +12,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <style>
     .area-portfolio {
-        padding:80px 0;
+        padding:80px 0; padding-top:0;
     }
     .area-portfolio .box-title {
         padding-bottom:40px; margin-bottom:20px;
@@ -97,180 +99,28 @@
 <body>
     <div id="header"></div>
 
-    <div class="contents-wrap">
-        <div class="area-portfolio">
-            <div class="wrap">
-                <div class="box-title">
-                    <h3 class="title">포트폴리오</h3>
-                    <p class="body">글천개 콘텐츠의 성공 사례를 직접 확인해보세요</p>
-                </div>
-
-                <div class="boxes">
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
+    <div id="app">
+        <div class="contents-wrap">
+            <div class="area-portfolio">
+                <div class="wrap">
+                    <div class="box-title">
+                        <h3 class="title">포트폴리오</h3>
+                        <p class="body">글천개 콘텐츠의 성공 사례를 직접 확인해보세요</p>
                     </div>
 
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
+                    <div class="boxes">
+                        <div class="box-wrap" v-for="item in items.data" :key="item.board_id">
+                            <a :href="`/board/read.php?M2_IDX=32973&B_IDX=${item.board_id}`" class="box" style="display: block">
+                                <div class="m-ratioBox-wrap">
+                                    <div class="m-ratioBox" :style="`background-image:url('${item.image}')`">
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
-
+                                <div class="content">
+                                    <h3 class="title">성공사례</h3>
+                                    <p class="body" v-text="item.title" style="white-space: preline"></p>
                                 </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel1.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel2.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel3.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-wrap">
-                        <div class="box">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox" style="background-image:url('./imgs/channel4.png')">
-
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">성공사례</h3>
-                                <p class="body">브랜딩에 고민이 <br/>많았던 피트니스 전문가</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -278,37 +128,40 @@
         </div>
     </div>
 
+
     <div id="footer"></div>
     <script>
-        new Swiper(".swiper-container", {
-            slidesPerView: "3",
-            spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
+        new Vue({
+            el: '#app',
+            data: {
+                items: {
+                    data: [],
+                    tot: 1,
+                    is_last: true,
+                },
+                error: ''
             },
-        })
+            mounted() {
+                axios.post(window.domain + '/board.list.php', new URLSearchParams({
+                    'KEY': 'kh9cdcbhv6t57glbq0doy65xadhd0fs4',
+                    'MODE': 'MBOARD',
+                    'menu2_id': '32973'
+                })).then(response => {
+                    console.log(response);
 
-        new Swiper(".swiper-container1", {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
-        })
+                    this.items = {
+                        ...response.data,
+                        data: response.data.items,
+                    }
 
-        new Swiper(".swiper-container2", {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
-        })
+                    console.log(this.items.data);
+                }).catch(error => {
+
+                });
+            }
+        });
     </script>
+
+
 </body>
 </html>

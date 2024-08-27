@@ -12,6 +12,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <style>
@@ -190,186 +192,249 @@
 </style>
 
 <body>
-    <div id="header"></div>
+    <div id="app">
+        <div class="contents-wrap">
+            <div class="area-contact">
+                <div class="wrap">
+                    <div class="box-title">
+                        <h3 class="title">CONTACT US</h3>
+                        <p class="body">상담 원하시는 내용을 자세히 남겨주시면 <br class="mobile"/>더욱 확실한 서비스를 받으실 수 있습니다</p>
+                    </div>
 
-    <div class="contents-wrap">
-        <div class="area-contact">
-            <div class="wrap">
-                <div class="box-title">
-                    <h3 class="title">CONTACT US</h3>
-                    <p class="body">상담 원하시는 내용을 자세히 남겨주시면 <br class="mobile"/>더욱 확실한 서비스를 받으실 수 있습니다</p>
+                    <form action="" class="form">
+                        <div class="top">
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">성함</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="성함을 입력해주세요" v-model="form.IPT_10729">
+                                </div>
+                            </div>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">휴대폰 번호</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="연락처를 입력해주세요" v-model="form.IPT_10730">
+                                </div>
+                            </div>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">이메일</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="이메일 주소를 입력해주세요" v-model="form.IPT_10731">
+                                </div>
+                            </div>
+
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">연령대</h3>
+
+                                <div class="m-input-text">
+                                    <input type="number" placeholder="연령대를 입력해주세요" v-model="form.IPT_10732">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <h3 class="title type01">어떻게 알고 오셨나요?</h3>
+
+                            <div class="box">
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome1" value="10522" name="wayToCome" v-model="form.IPT_FO_10522">
+                                        <label for="wayToCome1">글천개 유튜브 채널</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome2" value="10525" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <label for="wayToCome2">검색</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome4" value="10523" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <label for="wayToCome4">글천개 카페</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome5" value="10526" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <label for="wayToCome5">지인 추천</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome6" value="10524" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <label for="wayToCome6">글천개 블로그</label>
+                                    </div>
+                                </div>
+
+                                <!--<div class="box-inner box-and">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="wayToCome3" value="기타 (직접 입력)" name="weyToCome">
+                                        <label for="wayToCome3">기타 (직접 입력)</label>
+                                    </div>
+
+                                    <div class="m-input-text">
+                                        <input type="text" placeholder="기타 경로를 입력해주세요" name="wayToCome" />
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <h3 class="title type01">해결이 안 되는, 어려우신 점을 선택해주세요</h3>
+
+                            <div class="box">
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="difficult1" name="" value="10528" v-model="form.IPT_FO_10528">
+                                        <label for="difficult1">아이템은 있는데 매출이 나오지 않아요</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="difficult2" value="10529" name="difficult" v-model="form.IPT_FO_10528">
+                                        <label for="difficult2">노출이 되지 않고 있어요</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="difficult4" value="10530" name="difficult" v-model="form.IPT_FO_10528">
+                                        <label for="difficult4">신규 유입이 되지 않아요</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="difficult5" value="10531" name="difficult" v-model="form.IPT_FO_10528">
+                                        <label for="difficult5">브랜드 파워가 없어요</label>
+                                    </div>
+                                </div>
+
+                                <!--<div class="box-inner box-and">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="checkbox" id="difficult3" value="기타 (직접 입력)" name="difficult">
+                                        <label for="difficult3">기타 (직접 입력)</label>
+                                    </div>
+
+                                    <div class="m-input-text">
+                                        <input type="text" placeholder="기타 경로를 입력해주세요" name="difficult" />
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <h3 class="title type01">개인정보 수집 및 이용에 대한 동의</h3>
+
+                            <div class="box-privacy">(1) 수집하는 개인정보의 항목 및 수집방법
+                                - 수집하는 개인정보의 항목 : {이메일 주소, 또는 휴대폰번호}
+                                - 개인정보수집방법: 문의 및 상담하려는 이용자가 입력하는 경우에만 수집하게 됩니다.
+
+                                (2) 개인정보 수집 및 이용목적
+                                - {회사명}은(는) 수집된 개인정보는 문의 및 상담 요청에 대해 회신을 드리거나 회신을 위한 서비스 이용기록 조희를 위하여 활용합니다.
+
+                                (3) 개인정보의 보유 및 이용기간 -수집된 이메일 주소, 휴대폰 번호는 관련 법령에 달리 명시되어 있지 않는 한, 문의 처리 후 {1}년간 보관합니다.
+                            </div>
+
+                            <div class="m-input-checkbox-wrap">
+                                <div class="m-input-checkbox type01">
+                                    <input id="privacy" type="checkbox" name="privacy" v-model="agree">
+                                    <label for="privacy">개인정보 수집 및 이용 약관에 동의합니다.</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="btn" @click.prevent="store">상담 신청하기</a>
+                    </form>
                 </div>
-
-                <form action="" class="form">
-                    <div class="top">
-                        <div class="m-input-wrap">
-                            <h3 class="title type01">성함</h3>
-
-                            <div class="m-input-text">
-                                <input type="text" placeholder="성함을 입력해주세요">
-                            </div>
-                        </div>
-
-                        <div class="m-input-wrap">
-                            <h3 class="title type01">휴대폰 번호</h3>
-
-                            <div class="m-input-text">
-                                <input type="text" placeholder="연락처를 입력해주세요">
-                            </div>
-                        </div>
-
-                        <div class="m-input-wrap">
-                            <h3 class="title type01">이메일</h3>
-
-                            <div class="m-input-text">
-                                <input type="text" placeholder="이메일 주소를 입력해주세요">
-                            </div>
-                        </div>
-
-                        <div class="m-input-wrap">
-                            <h3 class="title type01">연령대</h3>
-
-                            <div class="m-input-select">
-                                <select name="" id="">
-                                    <option value="" selected disabled>연령대를 선택해주세요</option>
-                                </select>
-
-                                <img src="./imgs/angleDown.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-form">
-                        <h3 class="title type01">어떻게 알고 오셨나요?</h3>
-
-                        <div class="box">
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome1" value="글천개 유튜브 채널" name="weyToCome">
-                                    <label for="wayToCome1">글천개 유튜브 채널</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome2" value="검색" name="weyToCome">
-                                    <label for="wayToCome2">검색</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome4" value="글천개 카페" name="weyToCome">
-                                    <label for="wayToCome4">글천개 카페</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome5" value="지인 추천" name="weyToCome">
-                                    <label for="wayToCome5">지인 추천</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome6" value="글천개 블로그" name="weyToCome">
-                                    <label for="wayToCome6">글천개 블로그</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner box-and">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="wayToCome3" value="기타 (직접 입력)" name="weyToCome">
-                                    <label for="wayToCome3">기타 (직접 입력)</label>
-                                </div>
-
-                                <div class="m-input-text">
-                                    <input type="text" placeholder="기타 경로를 입력해주세요" name="wayToCome" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-form">
-                        <h3 class="title type01">해결이 안 되는, 어려우신 점을 선택해주세요</h3>
-
-                        <div class="box">
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="difficult1" value="아이템은 있는데 매출이 나오지 않아요" name="difficult">
-                                    <label for="difficult1">아이템은 있는데 매출이 나오지 않아요</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="difficult2" value="노출이 되지 않고 있어요" name="difficult">
-                                    <label for="difficult2">노출이 되지 않고 있어요</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="difficult4" value="신규 유입이 되지 않아요" name="difficult">
-                                    <label for="difficult4">신규 유입이 되지 않아요</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="difficult5" value="브랜드 파워가 없어요" name="difficult">
-                                    <label for="difficult5">브랜드 파워가 없어요</label>
-                                </div>
-                            </div>
-
-                            <div class="box-inner box-and">
-                                <div class="m-input-checkbox type01">
-                                    <input type="checkbox" id="difficult3" value="기타 (직접 입력)" name="difficult">
-                                    <label for="difficult3">기타 (직접 입력)</label>
-                                </div>
-
-                                <div class="m-input-text">
-                                    <input type="text" placeholder="기타 경로를 입력해주세요" name="difficult" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-form">
-                        <h3 class="title type01">개인정보 수집 및 이용에 대한 동의</h3>
-
-                        <div class="box-privacy">(1) 수집하는 개인정보의 항목 및 수집방법
-                            - 수집하는 개인정보의 항목 : {이메일 주소, 또는 휴대폰번호}
-                            - 개인정보수집방법: 문의 및 상담하려는 이용자가 입력하는 경우에만 수집하게 됩니다.
-
-                            (2) 개인정보 수집 및 이용목적
-                            - {회사명}은(는) 수집된 개인정보는 문의 및 상담 요청에 대해 회신을 드리거나 회신을 위한 서비스 이용기록 조희를 위하여 활용합니다.
-
-                            (3) 개인정보의 보유 및 이용기간 -수집된 이메일 주소, 휴대폰 번호는 관련 법령에 달리 명시되어 있지 않는 한, 문의 처리 후 {1}년간 보관합니다.
-                        </div>
-
-                        <div class="m-input-checkbox-wrap">
-                            <div class="m-input-checkbox type01">
-                                <input id="privacy" type="checkbox" name="privacy">
-                                <label for="privacy">개인정보 수집 및 이용 약관에 동의합니다.</label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <a href="#" class="btn">상담 신청하기</a>
-                </form>
             </div>
         </div>
     </div>
-
-    <div id="footer"></div>
 
     <script>
         $(".box-and label").unbind("click").bind("click",function (){
             $(this).closest('.box-and').toggleClass("active");
         })
+
+        new Vue({
+            el: '#app',
+            data(){
+                return {
+                    form: {
+                        IPT_10729 : "",
+                        IPT_10730 : "",
+                        IPT_10731 : "",
+                        IPT_10732 : "",
+                        IPT_FO_10522 : [],
+                        IPT_FO_10528 : [],
+                        KEY: "kh9cdcbhv6t57glbq0doy65xadhd0fs4",
+                        menu2_id: "33383"
+                    },
+                    agree: false,
+                }
+            },
+            mounted() {
+
+            },
+            methods: {
+                append(formData, name, value){
+                    if(Array.isArray(value)){
+                        value.map(valueData => {
+                            formData.append(`${name}[]`, valueData);
+                        });
+
+                        return formData;
+                    }
+
+                    formData.append(name, value);
+
+                    return formData;
+                },
+
+                store(){
+                    let formData = new FormData();
+
+                    let empty = false;
+
+                    Object.entries(this.form).some((item) => {
+                        formData = this.append(formData, item[0], item[1]);
+
+                        if((Array.isArray(item[1]) && item[1].length === 0) || !item[1]) {
+                            empty = true;
+
+                            return true;
+                        }
+
+                        return false;
+                    });
+
+                    if(empty)
+                        return alert("필수입력값을 모두 입력해주세요.");
+
+                    if(!this.agree)
+                        return alert("개인정보약관에 동의해주세요.");
+
+                    axios.post(window.domain + '/form.add.php', formData)
+                        .then(response => {
+                            alert("성공적으로 접수되었습니다.");
+                        }).catch(error => {
+
+                    });
+                }
+            }
+        });
     </script>
+
 </body>
 </html>
