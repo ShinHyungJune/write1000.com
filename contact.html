@@ -249,28 +249,28 @@
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="wayToCome2" value="10525" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <input type="checkbox" id="wayToCome2" value="10525" name="weyToCome" v-model="form.IPT_FO_10525">
                                         <label for="wayToCome2">검색</label>
                                     </div>
                                 </div>
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="wayToCome4" value="10523" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <input type="checkbox" id="wayToCome4" value="10523" name="weyToCome" v-model="form.IPT_FO_10523">
                                         <label for="wayToCome4">글천개 카페</label>
                                     </div>
                                 </div>
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="wayToCome5" value="10526" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <input type="checkbox" id="wayToCome5" value="10526" name="weyToCome" v-model="form.IPT_FO_10526">
                                         <label for="wayToCome5">지인 추천</label>
                                     </div>
                                 </div>
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="wayToCome6" value="10524" name="weyToCome" v-model="form.IPT_FO_10522">
+                                        <input type="checkbox" id="wayToCome6" value="10524" name="weyToCome" v-model="form.IPT_FO_10524">
                                         <label for="wayToCome6">글천개 블로그</label>
                                     </div>
                                 </div>
@@ -301,21 +301,21 @@
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="difficult2" value="10529" name="difficult" v-model="form.IPT_FO_10528">
+                                        <input type="checkbox" id="difficult2" value="10529" name="difficult" v-model="form.IPT_FO_10529">
                                         <label for="difficult2">노출이 되지 않고 있어요</label>
                                     </div>
                                 </div>
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="difficult4" value="10530" name="difficult" v-model="form.IPT_FO_10528">
+                                        <input type="checkbox" id="difficult4" value="10530" name="difficult" v-model="form.IPT_FO_10530">
                                         <label for="difficult4">신규 유입이 되지 않아요</label>
                                     </div>
                                 </div>
 
                                 <div class="box-inner">
                                     <div class="m-input-checkbox type01">
-                                        <input type="checkbox" id="difficult5" value="10531" name="difficult" v-model="form.IPT_FO_10528">
+                                        <input type="checkbox" id="difficult5" value="10531" name="difficult" v-model="form.IPT_FO_10531">
                                         <label for="difficult5">브랜드 파워가 없어요</label>
                                     </div>
                                 </div>
@@ -371,13 +371,32 @@
             el: '#app',
             data(){
                 return {
+                    haveToAnswers: [
+                        'IPT_10729',
+                        'IPT_10730',
+                        'IPT_10731',
+                        'IPT_10732',
+                    ],
+
                     form: {
                         IPT_10729 : "",
                         IPT_10730 : "",
                         IPT_10731 : "",
                         IPT_10732 : "",
-                        IPT_FO_10522 : [],
-                        IPT_FO_10528 : [],
+
+                        // 미필수
+                        IPT_FO_10522 : "",
+                        IPT_FO_10523 : "",
+                        IPT_FO_10524 : "",
+                        IPT_FO_10525 : "",
+                        IPT_FO_10526 : "",
+
+                        IPT_FO_10528 : "",
+                        IPT_FO_10529 : "",
+                        IPT_FO_10530 : "",
+                        IPT_FO_10531 : "",
+
+
                         KEY: "kh9cdcbhv6t57glbq0doy65xadhd0fs4",
                         menu2_id: "33383"
                     },
@@ -407,10 +426,17 @@
 
                     let empty = false;
 
-                    Object.entries(this.form).some((item) => {
-                        formData = this.append(formData, item[0], item[1]);
+                    let name;
 
-                        if((Array.isArray(item[1]) && item[1].length === 0) || !item[1]) {
+                    let value;
+
+                    Object.entries(this.form).some((item) => {
+                        name = item[0];
+                        value = item[1];
+
+                        formData = this.append(formData, name, value);
+
+                        if(this.haveToAnswers.includes(name) && !value) {
                             empty = true;
 
                             return true;

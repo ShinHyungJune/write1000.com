@@ -13,644 +13,646 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/script.js"></script>
 </head>
-<style>
-    .area-main .section-intro {
-        /*background:url('../imgs/base.png') no-repeat; background-size:cover; background-position:center;*/
-        background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81d.png') no-repeat; background-size:cover; background-position:center;
-    }
-    .area-main .section-intro .wrap {
-        display: flex; align-items: center; justify-content: center;
-        height:100vh;
-    }
-    .area-main .section-intro .wrap-inner {
-        display: flex; flex-wrap:wrap; justify-content: center;
-        width:100%; height:100%; padding-top:140px; padding-bottom:60px;
-    }
-    .area-main .section-intro .box-content {
-        width:100%;
-        text-align: center;
-    }
-    .area-main .section-intro .box-content .comments {
-        margin-bottom:50px;
-    }
-    .area-main .section-intro .box-content .comment:first-of-type {
-        margin-top:0;
-    }
-    .area-main .section-intro .box-content .comment {
-        margin-top:10px;
-        font-size: 28px;
-        color:#fff;
-    }
-    .area-main .section-intro .box-content .comment .point {
-        font-size: 28px; font-weight: 700;
-        color:#fff;
-    }
-    .area-main .section-intro .box-content .title {
-        font-size: 40px; font-weight: 700; color:#fff;
-    }
-    .area-main .section-intro .box-content img {
-        margin:10px 0;
-    }
-    .area-main .section-intro .box-consulting {
-        display: flex; align-items: center; justify-content: space-between;
-        width:100%;
-        margin-top:auto;
-        border-radius: 100px;
-        background: linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
-    }
-    .area-main .section-intro .box-consulting .comments {
-        padding:16px 50px; padding-right:0;
-    }
-    .area-main .section-intro .box-consulting .comment:first-of-type {
-        margin-top:0;
-    }
-    .area-main .section-intro .box-consulting .comment {
-        margin-top:4px;
-        font-size:18px;
-    }
-    .area-main .section-intro .box-consulting .comment .point {
-        font-size:18px; font-weight:700;
-    }
-    .area-main .section-intro .box-consulting .guide {
-        display: flex; align-items: center;
-    }
-    .area-main .section-intro .box-consulting .guide .title {
-        display: flex; align-items: center;
-        font-size:22px;
-    }
-    .area-main .section-intro .box-consulting .guide .title .point {
-        margin-left:8px;
-        font-size:22px; font-weight:700;
-    }
-    .area-main .section-intro .box-consulting .guide .title img {
-        margin-left:20px;
-    }
-    .area-main .section-intro .box-consulting .guide .btn {
-        display: flex; align-items: center; justify-content: center;
-        height:80px; padding:0 52px;
-        margin-left:28px; font-size:20px; font-weight:700;
-        background-color:#fff; color:#F7A300;
-        border-radius: 100px; border:2px solid white; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.24);
-        transition: all .3s;
-    }
-    .area-main .section-intro .box-consulting .guide .btn:hover {
-        border-color:#F7A300;
-    }
 
-    @media screen and (max-width:1200px) {
-
-        .area-main .section-intro .wrap {
-
-        }
-        .area-main .section-intro .wrap-inner {
-            padding-top:125px;
-        }
-        .area-main .section-intro .box-content {
-            text-align: left;
-        }
-        .area-main .section-intro .box-content .comment {
-            font-size:24px;
-        }
-        .area-main .section-intro .box-content .comment .point {
-            font-size:24px;
-        }
-        .area-main .section-intro .box-content .title {
-            font-size:30px;
-        }
-        .area-main .section-intro .box-content img {
-            width:265px;
-        }
-
-        .area-main .section-intro .box-consulting {
-            width:100%;
-            position:fixed; bottom:0; left:0;
-            background:linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
-            border-radius: 24px 24px 0px 0px;
-            z-index: 1;
-        }
-        .area-main .section-intro .box-consulting .comments {
-            display: none;
-        }
-        .area-main .section-intro .box-consulting .guide {
-            width: 100%;
-
-        }
-        .area-main .section-intro .box-consulting .guide .title {
-            display: none;
-        }
-
-        .area-main .section-intro .box-consulting .guide .btn {
-            width:100%; height:60px;
-            margin-left:0;
-            background-color:transparent; color:#fff; box-shadow:none; border:none;
-        }
-    }
-
-    .area-main .section-text {
-        padding-bottom:140px; padding-top:110px;
-        text-align: center;
-        background-color:#191919;
-    }
-    .area-main .section-text .wrap > .title {
-        margin-bottom:90px;
-        font-size: 40px; font-weight: 700;
-        color:#fff;
-    }
-    .area-main .section-text .box-math .title {
-        display: flex; align-items: center; justify-content: center; gap:40px;
-        font-size:50px; font-weight:700;
-        color:#fff;
-    }
-    .area-main .section-text .box-math .title .point {
-        font-size:50px; font-weight:700;
-        color:#FFE500;
-    }
-    .area-main .section-text .box-math .divide {
-        margin:30px 0;
-        font-size:40px; font-weight:700; color:#fff;
-    }
-    .area-main .section-text .box-math .math {
-        display: flex; align-items: center; justify-content: center; gap:25px;
-        margin-bottom:64px;
-    }
-    .area-main .section-text .box-math .math .tag {
-        display: flex; justify-content: center; align-items: center;
-        width:150px; padding:18px 0;
-        font-size: 24px; font-weight:700;
-        background-color:#474747; border-radius: 100px;
-        color:#fff;
-    }
-    .area-main .section-text .box-math .math .deco {
-        font-size:24px; font-weight:600; color:#fff;
-    }
-    .area-main .section-text .comment {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 60px; /* 120% */
-        color:#fff;
-    }
-    .area-main .section-text .comment .point {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 60px; /* 120% */
-    }
-
-    @media screen and (max-width:1200px) {
-        .area-main .section-text {
-            padding-bottom:100px; padding-top:60px;
-        }
-        .area-main .section-text .wrap > .title {
-            margin-bottom:80px;
-            font-size:30px;
-        }
-        .area-main .section-text .box-math .title {
-            gap:30px;
-            font-size:30px;
-        }
-        .area-main .section-text .box-math .title .point {
-            font-size:30px;
-        }
-        .area-main .section-text .box-math .divide {
-            margin:20px 0;
-            font-size:30px;
-        }
-        .area-main .section-text .box-math .math {
-            margin-bottom:80px;
-            gap:10px;
-        }
-        .area-main .section-text .box-math .math .tag {
-            font-size:20px;
-        }
-        .area-main .section-text .box-math .math .deco {
-            font-size:16px; font-weight:400;
-        }
-        .area-main .section-text .comment {
-            font-size:30px; line-height:48px; word-break: keep-all;
-        }
-        .area-main .section-text .comment .point {
-            font-size:30px; line-height:48px;
-        }
-    }
-
-    .section-swiper {
-        padding-bottom:80px;
-        background-color:#191919;
-    }
-    .section-swiper  .boxes {
-        display: flex; justify-content: center; align-items: center;
-    }
-    .section-swiper .box-wrap {
-        width:375px; flex:0 0 auto;
-        padding:8px;
-    }
-    .section-swiper .box {
-        padding:10px;
-        background-color:#292929; border-radius:10px;
-    }
-    .section-swiper .box .m-ratioBox-wrap {
-        background-size:cover; background-position:center;
-        border-radius:10px;
-    }
-    .section-swiper .box .content {
-        padding-bottom:20px;
-        text-align: center;
-    }
-    .section-swiper .box .content .name {
-        margin:20px 0;
-        font-size:14px; line-height:20px; word-break: keep-all;
-        color:#fff;
-    }
-    .section-swiper .box .box-comment .body {
-        font-size:14px; font-weight:700; line-height:20px; word-break: keep-all;
-        color:#fff;
-    }
-    .section-swiper .box .box-comment .body .point {
-        font-size:14px; font-weight:700; line-height:20px; word-break: keep-all;
-        color:#FFE500;
-    }
-    .section-swiper .box .box-comment .title {
-        font-size:18px; font-weight:700;
-        color:#FFE500;
-    }
-    .section-swiper .box .box-comment .title .point {
-        font-size:18px; font-weight:700;
-        color:#FFE500;
-    }
-    .section-swiper .box-wrap-center {
-        width:375px; flex:0 0 auto;
-    }
-    .section-swiper .box-center {
-        background-color:#FFE500;
-        text-align: center;
-        border-radius:10px;
-    }
-    .section-swiper .box-center .top {
-        padding-top:50px; margin-bottom:40px;
-        font-size:20px; line-height:26px;
-    }
-    .section-swiper .box-center .top .point {
-        margin-top:40px;
-        font-size:20px; line-height:26px; font-weight:700;
-    }
-    .section-swiper .box-center .center {
-
-    }
-    .section-swiper .box-center .center img {
-        margin-bottom:4px;
-    }
-    .section-swiper .box-center .center .title {
-        margin-bottom:50px;
-        font-size: 34px; font-weight: 700;
-    }
-    .section-swiper .box-center .center .body {
-        margin-bottom:60px;
-        font-size: 18px;
-        font-weight: 400;
-    }
-    .section-swiper .box-center .center .body .point {
-        font-size: 18px;
-        font-weight: 700;
-    }
-    .section-swiper .box-center .link {
-        display: flex; align-items: center; justify-content: space-between;
-        padding:30px 20px; margin:0 20px;
-        font-size:20px; font-weight:700;
-        border-top:2px solid black;
-    }
-
-    @media screen and (max-width: 1200px) {
-        .section-swiper {
-            padding-bottom:50px;
-        }
-        .section-swiper .box-center {
-            padding:10px 30px;
-        }
-        .section-swiper .box-center .top {
-            padding-top:40px;
-        }
-        .section-swiper .box-wrap {
-            width:90%;
-        }
-        .section-swiper .box-wrap-center {
-            max-width: 100%; width:100%;
-            padding:0 20px; margin-bottom:22px;
-        }
-        .section-swiper .box-center .center .title {
-            margin-bottom:30px;
-        }
-        .section-swiper .box-center .center .body {
-            margin-bottom:30px;
-        }
-        .section-swiper .box-center .link {
-            padding:20px 0; margin:0;
-        }
-
-        .section-swiper .boxes {
-            justify-content: flex-start;
-            overflow-x:auto;
-            padding-left:12px;
-        }
-    }
-
-    .section-product {
-        padding-bottom:180px;
-        background-color:#191919;
-    }
-    .section-product .top {
-        margin-bottom:40px;
-        text-align: center;
-    }
-    .section-product .top .box-title {
-        width: 488px; padding:24px 0; margin:0 auto; margin-bottom:30px;
-        position:relative;
-        border-radius:100px;
-        background-color:#292929;
-        text-align: center;
-    }
-    .section-product .top .box-title:after {
-        content:"";
-        width:26px; height:26px;
-        position: absolute; bottom:-24px; left:50%; transform:translateX(-50%);
-        background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c82f.png') no-repeat;
-    }
-    .section-product .top .box-title .title {
-        font-size: 24px; font-weight:700;
-        color:#fff;
-    }
-    .section-product .top .box-title .title .point {
-        font-size: 24px;
-        font-weight: 700;
-    }
-    .section-product .box-content {
-        position:relative;
-    }
-    .section-product .box-content .base {
-        display: block;
-        max-width:100%;
-        margin:0 auto;
-    }
-    .section-product .box-content .box-title {
-        display: flex; align-items: center; justify-content: center; flex-wrap:wrap;
-        width:100%; height:100%;
-        position: absolute; top:0; left:0;
-        text-align: center;
-    }
-    .section-product .box-content .box-title .title {
-        display: block; margin:0 auto; margin-bottom:20px;
-    }
-    .section-product .box-content .box-title .body {
-        width: 100%; margin-bottom:auto;
-        font-size: 32px; font-weight: 700;
-        line-height: 38px; /* 118.75% */
-        color:#fff;
-    }
-    .section-product .box-content .box-title .body .point {
-        width: 100%;
-        font-size: 32px; font-weight: 700;
-        line-height: 38px; /* 118.75% */
-    }
-
-    @media screen and (max-width:1200px) {
-        .section-product {
-            padding-bottom:80px;
-        }
-        .section-product .top .box-title {
-            max-width: 100%;
-            padding:20px 0;
-        }
-        .section-product .top .box-title .title {
-            font-size:20px;
-        }
-        .section-product .top .box-title .title .point {
-            font-size:20px;
-        }
-        .section-product .top img {
-            width:100px;
-        }
-        .section-product .box-content .box-title .title {
-            width:150px;
-        }
-        .section-product .box-content .box-title .body {
-            font-size:26px; word-break: keep-all;
-        }
-        .section-product .box-content .box-title .body .point {
-            font-size:26px; word-break: keep-all;
-        }
-    }
-
-    .section-worry {
-        padding-bottom:60px;
-        background-color:#191919;
-    }
-    .section-worry .box-comment {
-        display: flex; gap:16px; align-items: center; justify-content: center;
-        margin-bottom:20px;
-    }
-    .section-worry .box-comment img {}
-    .section-worry .box-comment .box-title {
-        padding:18px 36px;
-        background-color:#292929; border-radius:100px;
-    }
-    .section-worry .box-comment .box-title .title {
-        font-size: 18px; font-weight: 700; color:#fff;
-    }
-    .section-worry .box-comment .box-title .title .point {
-        font-size: 18px; font-weight: 700; color:#fff;
-    }
-    .section-worry .box-comment:nth-child(2n) {
-        flex-direction: row-reverse;
-    }
-
-    .section-worry .box-visual {
-        padding:60px 0; margin-top:-50px;
-        text-align: center;
-        background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81e.png') no-repeat;
-        background-position:center;
-    }
-    .section-worry .box-visual .title {
-        margin-bottom:16px;
-    }
-    .section-worry .box-visual .body {
-        font-size: 24px;font-weight: 700;line-height: 30px; /* 125% */
-        color:#fff;
-    }
-    .section-worry .box-visual .body .point {
-        font-size: 24px;font-weight: 700;line-height: 30px; /* 125% */
-    }
-
-    @media screen and (max-width:1200px) {
-        .section-worry {
-            padding-bottom:0;
-        }
-        .section-worry .box-comment {
-            padding:0 20px;
-        }
-        .section-worry .box-comment img {
-            width:70px;
-        }
-        .section-worry .box-comment .box-title .title {
-            font-size:16px;
-        }
-        .section-worry .box-comment .box-title .title .point {
-            font-size:16px; word-break: keep-all;
-        }
-        .section-worry .box-visual {
-            min-height:436px;
-            background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81f.png') no-repeat;
-        }
-    }
-
-    .section-only {
-        padding-bottom:100px;
-        background-color:#191919;
-    }
-    .section-only .top {
-        margin-bottom:50px;
-        text-align: center;
-    }
-    .section-only .top .title {
-        margin-bottom:20px;
-        font-size: 32px; font-weight: 700; line-height: 42px;
-    }
-    .section-only .top .body {
-        font-size: 24px; line-height:32px;
-        color:#fff;
-    }
-    .section-only .top .body .point {
-        font-size: 24px;
-        font-weight: 700; color:#fff;
-    }
-    .section-only .boxes {
-        display: flex; flex-wrap:wrap;
-        margin:-8px;
-    }
-    .section-only .boxes .box-wrap {
-        width:25%; padding:8px;
-    }
-    .section-only .boxes .box {
-        padding:30px 14px;
-        background-color:#292929;
-        border-radius:10px;
-        text-align: center;
-    }
-    .section-only .boxes .box .img-wrap {
-        margin-bottom:12px;
-    }
-    .section-only .boxes .box .title {
-        font-size:18px; font-weight:700; line-height:24px; color:#fff;
-    }
-    .section-only .boxes .box .title .point {
-        font-size:18px; font-weight:700; line-height:24px; color:#fff;
-    }
-
-    @media screen and (max-width:1200px) {
-        .section-only {
-            padding-bottom:50px;
-        }
-        .section-only .top {
-            margin-bottom:40px;
-        }
-        .section-only .top .title {
-            font-size:26px;
-            line-height:32px;
-        }
-        .section-only .top .title .point {
-            font-size:26px;
-            line-height:32px;
-        }
-        .section-only .top .body {
-            font-size:20px; line-height:24px;
-        }
-        .section-only .top .body .point {
-            font-size:20px; line-height:24px;
-        }
-        .section-only .boxes {
-            flex-wrap:wrap;
-        }
-        .section-only .boxes .box-wrap {
-            width: 100%;
-        }
-
-        .section-only .boxes .box {
-            display: flex; align-items: center; justify-content: flex-start;
-            gap:20px; padding:20px;
-        }
-        .section-only .boxes .box .img-wrap {
-            margin-bottom:0;
-        }
-        .section-only .boxes .box .title {
-            font-size:16px;
-            text-align: left;
-        }
-        .section-only .boxes .box .title .point {
-            font-size:16px;
-        }
-    }
-
-    .section-consulting {
-        padding-bottom:130px;
-        background-color:#191919;
-        text-align: center;
-    }
-    .section-consulting .comment {
-        margin-bottom:20px;
-        font-size: 24px;
-        line-height: 30px;
-        color:#fff;
-    }
-    .section-consulting .comment .point {
-        font-size: 24px; font-weight:700;
-        line-height: 30px;
-        color:#fff;
-    }
-    .section-consulting .title {
-        margin-bottom:40px;
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 34px;
-        color:#fff;
-    }
-    .section-consulting .title .point {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 34px;
-    }
-    .section-consulting .btn {
-        display: flex; align-items: center; justify-content: center;
-        width:376px; height:80px;
-        margin:0 auto;
-        font-size:22px; font-weight: 700;
-        color:#fff; background: linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
-        border-radius:100px;
-    }
-
-    @media screen and (max-width:1200px) {
-        .section-consulting {
-            padding-bottom:60px;
-        }
-        .section-consulting .comment {
-            margin-bottom:48px;
-            font-size:20px;
-        }
-        .section-consulting .comment .point {
-            font-size:20px;
-        }
-        .section-consulting .title {
-            font-size:24px; font-weight:400;
-        }
-        .section-consulting .title .point {
-            font-size:24px;
-        }
-        .section-consulting .btn {
-            height:auto;
-            max-width:100%; padding:19px 0;
-            font-size:18px;
-        }
-    }
-
-</style>
 <body>
     <div id="header"></div>
+
+    <style>
+        .area-main .section-intro {
+            /*background:url('../imgs/base.png') no-repeat; background-size:cover; background-position:center;*/
+            background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81d.png') no-repeat; background-size:cover; background-position:center;
+        }
+        .area-main .section-intro .wrap {
+            display: flex; align-items: center; justify-content: center;
+            height:100vh;
+        }
+        .area-main .section-intro .wrap-inner {
+            display: flex; flex-wrap:wrap; justify-content: center;
+            width:100%; height:100%; padding-top:140px; padding-bottom:60px;
+        }
+        .area-main .section-intro .box-content {
+            width:100%;
+            text-align: center;
+        }
+        .area-main .section-intro .box-content .comments {
+            margin-bottom:50px;
+        }
+        .area-main .section-intro .box-content .comment:first-of-type {
+            margin-top:0;
+        }
+        .area-main .section-intro .box-content .comment {
+            margin-top:10px;
+            font-size: 28px;
+            color:#fff;
+        }
+        .area-main .section-intro .box-content .comment .point {
+            font-size: 28px; font-weight: 700;
+            color:#fff;
+        }
+        .area-main .section-intro .box-content .title {
+            font-size: 40px; font-weight: 700; color:#fff;
+        }
+        .area-main .section-intro .box-content img {
+            margin:10px 0;
+        }
+        .area-main .section-intro .box-consulting {
+            display: flex; align-items: center; justify-content: space-between;
+            width:100%;
+            margin-top:auto;
+            border-radius: 100px;
+            background: linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
+        }
+        .area-main .section-intro .box-consulting .comments {
+            padding:16px 50px; padding-right:0;
+        }
+        .area-main .section-intro .box-consulting .comment:first-of-type {
+            margin-top:0;
+        }
+        .area-main .section-intro .box-consulting .comment {
+            margin-top:4px;
+            font-size:18px;
+        }
+        .area-main .section-intro .box-consulting .comment .point {
+            font-size:18px; font-weight:700;
+        }
+        .area-main .section-intro .box-consulting .guide {
+            display: flex; align-items: center;
+        }
+        .area-main .section-intro .box-consulting .guide .title {
+            display: flex; align-items: center;
+            font-size:22px;
+        }
+        .area-main .section-intro .box-consulting .guide .title .point {
+            margin-left:8px;
+            font-size:22px; font-weight:700;
+        }
+        .area-main .section-intro .box-consulting .guide .title img {
+            margin-left:20px;
+        }
+        .area-main .section-intro .box-consulting .guide .btn {
+            display: flex; align-items: center; justify-content: center;
+            height:80px; padding:0 52px;
+            margin-left:28px; font-size:20px; font-weight:700;
+            background-color:#fff; color:#F7A300;
+            border-radius: 100px; border:2px solid white; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.24);
+            transition: all .3s;
+        }
+        .area-main .section-intro .box-consulting .guide .btn:hover {
+            border-color:#F7A300;
+        }
+
+        @media screen and (max-width:1200px) {
+
+            .area-main .section-intro .wrap {
+
+            }
+            .area-main .section-intro .wrap-inner {
+                padding-top:125px;
+            }
+            .area-main .section-intro .box-content {
+                text-align: left;
+            }
+            .area-main .section-intro .box-content .comment {
+                font-size:24px;
+            }
+            .area-main .section-intro .box-content .comment .point {
+                font-size:24px;
+            }
+            .area-main .section-intro .box-content .title {
+                font-size:30px;
+            }
+            .area-main .section-intro .box-content img {
+                width:265px;
+            }
+
+            .area-main .section-intro .box-consulting {
+                width:100%;
+                position:fixed; bottom:0; left:0;
+                background:linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
+                border-radius: 24px 24px 0px 0px;
+                z-index: 1;
+            }
+            .area-main .section-intro .box-consulting .comments {
+                display: none;
+            }
+            .area-main .section-intro .box-consulting .guide {
+                width: 100%;
+
+            }
+            .area-main .section-intro .box-consulting .guide .title {
+                display: none;
+            }
+
+            .area-main .section-intro .box-consulting .guide .btn {
+                width:100%; height:60px;
+                margin-left:0;
+                background-color:transparent; color:#fff; box-shadow:none; border:none;
+            }
+        }
+
+        .area-main .section-text {
+            padding-bottom:140px; padding-top:110px;
+            text-align: center;
+            background-color:#191919;
+        }
+        .area-main .section-text .wrap > .title {
+            margin-bottom:90px;
+            font-size: 40px; font-weight: 700;
+            color:#fff;
+        }
+        .area-main .section-text .box-math .title {
+            display: flex; align-items: center; justify-content: center; gap:40px;
+            font-size:50px; font-weight:700;
+            color:#fff;
+        }
+        .area-main .section-text .box-math .title .point {
+            font-size:50px; font-weight:700;
+            color:#FFE500;
+        }
+        .area-main .section-text .box-math .divide {
+            margin:30px 0;
+            font-size:40px; font-weight:700; color:#fff;
+        }
+        .area-main .section-text .box-math .math {
+            display: flex; align-items: center; justify-content: center; gap:25px;
+            margin-bottom:64px;
+        }
+        .area-main .section-text .box-math .math .tag {
+            display: flex; justify-content: center; align-items: center;
+            width:150px; padding:18px 0;
+            font-size: 24px; font-weight:700;
+            background-color:#474747; border-radius: 100px;
+            color:#fff;
+        }
+        .area-main .section-text .box-math .math .deco {
+            font-size:24px; font-weight:600; color:#fff;
+        }
+        .area-main .section-text .comment {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px; /* 120% */
+            color:#fff;
+        }
+        .area-main .section-text .comment .point {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px; /* 120% */
+        }
+
+        @media screen and (max-width:1200px) {
+            .area-main .section-text {
+                padding-bottom:100px; padding-top:60px;
+            }
+            .area-main .section-text .wrap > .title {
+                margin-bottom:80px;
+                font-size:30px;
+            }
+            .area-main .section-text .box-math .title {
+                gap:30px;
+                font-size:30px;
+            }
+            .area-main .section-text .box-math .title .point {
+                font-size:30px;
+            }
+            .area-main .section-text .box-math .divide {
+                margin:20px 0;
+                font-size:30px;
+            }
+            .area-main .section-text .box-math .math {
+                margin-bottom:80px;
+                gap:10px;
+            }
+            .area-main .section-text .box-math .math .tag {
+                font-size:20px;
+            }
+            .area-main .section-text .box-math .math .deco {
+                font-size:16px; font-weight:400;
+            }
+            .area-main .section-text .comment {
+                font-size:30px; line-height:48px; word-break: keep-all;
+            }
+            .area-main .section-text .comment .point {
+                font-size:30px; line-height:48px;
+            }
+        }
+
+        .section-swiper {
+            padding-bottom:80px;
+            background-color:#191919;
+        }
+        .section-swiper  .boxes {
+            display: flex; justify-content: center; align-items: center;
+        }
+        .section-swiper .box-wrap {
+            width:375px; flex:0 0 auto;
+            padding:8px;
+        }
+        .section-swiper .box {
+            padding:10px;
+            background-color:#292929; border-radius:10px;
+        }
+        .section-swiper .box .m-ratioBox-wrap {
+            background-size:cover; background-position:center;
+            border-radius:10px;
+        }
+        .section-swiper .box .content {
+            padding-bottom:20px;
+            text-align: center;
+        }
+        .section-swiper .box .content .name {
+            margin:20px 0;
+            font-size:14px; line-height:20px; word-break: keep-all;
+            color:#fff;
+        }
+        .section-swiper .box .box-comment .body {
+            font-size:14px; font-weight:700; line-height:20px; word-break: keep-all;
+            color:#fff;
+        }
+        .section-swiper .box .box-comment .body .point {
+            font-size:14px; font-weight:700; line-height:20px; word-break: keep-all;
+            color:#FFE500;
+        }
+        .section-swiper .box .box-comment .title {
+            font-size:18px; font-weight:700;
+            color:#FFE500;
+        }
+        .section-swiper .box .box-comment .title .point {
+            font-size:18px; font-weight:700;
+            color:#FFE500;
+        }
+        .section-swiper .box-wrap-center {
+            width:375px; flex:0 0 auto;
+        }
+        .section-swiper .box-center {
+            background-color:#FFE500;
+            text-align: center;
+            border-radius:10px;
+        }
+        .section-swiper .box-center .top {
+            padding-top:50px; margin-bottom:40px;
+            font-size:20px; line-height:26px;
+        }
+        .section-swiper .box-center .top .point {
+            margin-top:40px;
+            font-size:20px; line-height:26px; font-weight:700;
+        }
+        .section-swiper .box-center .center {
+
+        }
+        .section-swiper .box-center .center img {
+            margin-bottom:4px;
+        }
+        .section-swiper .box-center .center .title {
+            margin-bottom:50px;
+            font-size: 34px; font-weight: 700;
+        }
+        .section-swiper .box-center .center .body {
+            margin-bottom:60px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .section-swiper .box-center .center .body .point {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .section-swiper .box-center .link {
+            display: flex; align-items: center; justify-content: space-between;
+            padding:30px 20px; margin:0 20px;
+            font-size:20px; font-weight:700;
+            border-top:2px solid black;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .section-swiper {
+                padding-bottom:50px;
+            }
+            .section-swiper .box-center {
+                padding:10px 30px;
+            }
+            .section-swiper .box-center .top {
+                padding-top:40px;
+            }
+            .section-swiper .box-wrap {
+                width:90%;
+            }
+            .section-swiper .box-wrap-center {
+                max-width: 100%; width:100%;
+                padding:0 20px; margin-bottom:22px;
+            }
+            .section-swiper .box-center .center .title {
+                margin-bottom:30px;
+            }
+            .section-swiper .box-center .center .body {
+                margin-bottom:30px;
+            }
+            .section-swiper .box-center .link {
+                padding:20px 0; margin:0;
+            }
+
+            .section-swiper .boxes {
+                justify-content: flex-start;
+                overflow-x:auto;
+                padding-left:12px;
+            }
+        }
+
+        .section-product {
+            padding-bottom:180px;
+            background-color:#191919;
+        }
+        .section-product .top {
+            margin-bottom:40px;
+            text-align: center;
+        }
+        .section-product .top .box-title {
+            width: 488px; padding:24px 0; margin:0 auto; margin-bottom:30px;
+            position:relative;
+            border-radius:100px;
+            background-color:#292929;
+            text-align: center;
+        }
+        .section-product .top .box-title:after {
+            content:"";
+            width:26px; height:26px;
+            position: absolute; bottom:-24px; left:50%; transform:translateX(-50%);
+            background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c82f.png') no-repeat;
+        }
+        .section-product .top .box-title .title {
+            font-size: 24px; font-weight:700;
+            color:#fff;
+        }
+        .section-product .top .box-title .title .point {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .section-product .box-content {
+            position:relative;
+        }
+        .section-product .box-content .base {
+            display: block;
+            max-width:100%;
+            margin:0 auto;
+        }
+        .section-product .box-content .box-title {
+            display: flex; align-items: center; justify-content: center; flex-wrap:wrap;
+            width:100%; height:100%;
+            position: absolute; top:0; left:0;
+            text-align: center;
+        }
+        .section-product .box-content .box-title .title {
+            display: block; margin:0 auto; margin-bottom:20px;
+        }
+        .section-product .box-content .box-title .body {
+            width: 100%; margin-bottom:auto;
+            font-size: 32px; font-weight: 700;
+            line-height: 38px; /* 118.75% */
+            color:#fff;
+        }
+        .section-product .box-content .box-title .body .point {
+            width: 100%;
+            font-size: 32px; font-weight: 700;
+            line-height: 38px; /* 118.75% */
+        }
+
+        @media screen and (max-width:1200px) {
+            .section-product {
+                padding-bottom:80px;
+            }
+            .section-product .top .box-title {
+                max-width: 100%;
+                padding:20px 0;
+            }
+            .section-product .top .box-title .title {
+                font-size:20px;
+            }
+            .section-product .top .box-title .title .point {
+                font-size:20px;
+            }
+            .section-product .top img {
+                width:100px;
+            }
+            .section-product .box-content .box-title .title {
+                width:150px;
+            }
+            .section-product .box-content .box-title .body {
+                font-size:26px; word-break: keep-all;
+            }
+            .section-product .box-content .box-title .body .point {
+                font-size:26px; word-break: keep-all;
+            }
+        }
+
+        .section-worry {
+            padding-bottom:60px;
+            background-color:#191919;
+        }
+        .section-worry .box-comment {
+            display: flex; gap:16px; align-items: center; justify-content: center;
+            margin-bottom:20px;
+        }
+        .section-worry .box-comment img {}
+        .section-worry .box-comment .box-title {
+            padding:18px 36px;
+            background-color:#292929; border-radius:100px;
+        }
+        .section-worry .box-comment .box-title .title {
+            font-size: 18px; font-weight: 700; color:#fff;
+        }
+        .section-worry .box-comment .box-title .title .point {
+            font-size: 18px; font-weight: 700; color:#fff;
+        }
+        .section-worry .box-comment:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+
+        .section-worry .box-visual {
+            padding:60px 0; margin-top:-50px;
+            text-align: center;
+            background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81e.png') no-repeat;
+            background-position:center;
+        }
+        .section-worry .box-visual .title {
+            margin-bottom:16px;
+        }
+        .section-worry .box-visual .body {
+            font-size: 24px;font-weight: 700;line-height: 30px; /* 125% */
+            color:#fff;
+        }
+        .section-worry .box-visual .body .point {
+            font-size: 24px;font-weight: 700;line-height: 30px; /* 125% */
+        }
+
+        @media screen and (max-width:1200px) {
+            .section-worry {
+                padding-bottom:0;
+            }
+            .section-worry .box-comment {
+                padding:0 20px;
+            }
+            .section-worry .box-comment img {
+                width:70px;
+            }
+            .section-worry .box-comment .box-title .title {
+                font-size:16px;
+            }
+            .section-worry .box-comment .box-title .title .point {
+                font-size:16px; word-break: keep-all;
+            }
+            .section-worry .box-visual {
+                min-height:436px;
+                background:url('https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81f.png') no-repeat;
+            }
+        }
+
+        .section-only {
+            padding-bottom:100px;
+            background-color:#191919;
+        }
+        .section-only .top {
+            margin-bottom:50px;
+            text-align: center;
+        }
+        .section-only .top .title {
+            margin-bottom:20px;
+            font-size: 32px; font-weight: 700; line-height: 42px;
+        }
+        .section-only .top .body {
+            font-size: 24px; line-height:32px;
+            color:#fff;
+        }
+        .section-only .top .body .point {
+            font-size: 24px;
+            font-weight: 700; color:#fff;
+        }
+        .section-only .boxes {
+            display: flex; flex-wrap:wrap;
+            margin:-8px;
+        }
+        .section-only .boxes .box-wrap {
+            width:25%; padding:8px;
+        }
+        .section-only .boxes .box {
+            padding:30px 14px;
+            background-color:#292929;
+            border-radius:10px;
+            text-align: center;
+        }
+        .section-only .boxes .box .img-wrap {
+            margin-bottom:12px;
+        }
+        .section-only .boxes .box .title {
+            font-size:18px; font-weight:700; line-height:24px; color:#fff;
+        }
+        .section-only .boxes .box .title .point {
+            font-size:18px; font-weight:700; line-height:24px; color:#fff;
+        }
+
+        @media screen and (max-width:1200px) {
+            .section-only {
+                padding-bottom:50px;
+            }
+            .section-only .top {
+                margin-bottom:40px;
+            }
+            .section-only .top .title {
+                font-size:26px;
+                line-height:32px;
+            }
+            .section-only .top .title .point {
+                font-size:26px;
+                line-height:32px;
+            }
+            .section-only .top .body {
+                font-size:20px; line-height:24px;
+            }
+            .section-only .top .body .point {
+                font-size:20px; line-height:24px;
+            }
+            .section-only .boxes {
+                flex-wrap:wrap;
+            }
+            .section-only .boxes .box-wrap {
+                width: 100%;
+            }
+
+            .section-only .boxes .box {
+                display: flex; align-items: center; justify-content: flex-start;
+                gap:20px; padding:20px;
+            }
+            .section-only .boxes .box .img-wrap {
+                margin-bottom:0;
+            }
+            .section-only .boxes .box .title {
+                font-size:16px;
+                text-align: left;
+            }
+            .section-only .boxes .box .title .point {
+                font-size:16px;
+            }
+        }
+
+        .section-consulting {
+            padding-bottom:130px;
+            background-color:#191919;
+            text-align: center;
+        }
+        .section-consulting .comment {
+            margin-bottom:20px;
+            font-size: 24px;
+            line-height: 30px;
+            color:#fff;
+        }
+        .section-consulting .comment .point {
+            font-size: 24px; font-weight:700;
+            line-height: 30px;
+            color:#fff;
+        }
+        .section-consulting .title {
+            margin-bottom:40px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 34px;
+            color:#fff;
+        }
+        .section-consulting .title .point {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 34px;
+        }
+        .section-consulting .btn {
+            display: flex; align-items: center; justify-content: center;
+            width:376px; height:80px;
+            margin:0 auto;
+            font-size:22px; font-weight: 700;
+            color:#fff; background: linear-gradient(271deg, #FFA621 -11.86%, #FFE500 100.16%);
+            border-radius:100px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .section-consulting {
+                padding-bottom:60px;
+            }
+            .section-consulting .comment {
+                margin-bottom:48px;
+                font-size:20px;
+            }
+            .section-consulting .comment .point {
+                font-size:20px;
+            }
+            .section-consulting .title {
+                font-size:24px; font-weight:400;
+            }
+            .section-consulting .title .point {
+                font-size:24px;
+            }
+            .section-consulting .btn {
+                height:auto;
+                max-width:100%; padding:19px 0;
+                font-size:18px;
+            }
+        }
+
+    </style>
 
     <div class="contents-wrap">
         <div class="area-main">
@@ -688,7 +690,7 @@
                             <div class="guide">
                                 <h3 class="title">지금 바로 <span class="point">상담 신청하세요!</span> <img src="https://cdn01.nxcloud.biz/web/2487/meditor_item_html/66bdf9fc5c81c.png" alt="" class="deco"></h3>
 
-                                <a href="/coun/?M2_IDX=33383" class="btn">상담문의</a>
+                                <a href="/form/add.php?M2_IDX=33383" class="btn">상담문의</a>
                             </div>
                         </div>
                     </div>
@@ -1020,7 +1022,7 @@
                     <h3 class="title">
                         지금 바로 <span class="point primary">상담 신청하세요!</span>
                     </h3>
-                    <a href="/coun/?M2_IDX=33383" class="btn">
+                    <a href="/form/add.php?M2_IDX=33383" class="btn">
                         지금 상담 신청하기
                     </a>
                 </div>
