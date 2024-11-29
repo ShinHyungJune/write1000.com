@@ -334,6 +334,77 @@
                         </div>
 
                         <div class="box-form">
+                            <h3 class="title type01">활동하고 계신 온라인 플랫폼이 있다면 선택해주세요.</h3>
+
+                            <div class="box">
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="radio" id="platform1"  value="10935" name="platform" v-model="form.IPT_11359">
+                                        <label for="platform1">블로그</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="radio" id="platform2" value="10936" name="platform" v-model="form.IPT_11359">
+                                        <label for="platform2">카페</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="radio" id="platform4" value="10937" name="platform" v-model="form.IPT_11359">
+                                        <label for="platform4">인스타그램</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="radio" id="platform5" value="10938" name="platform" v-model="form.IPT_11359">
+                                        <label for="platform5">유튜브</label>
+                                    </div>
+                                </div>
+
+                                <div class="box-inner">
+                                    <div class="m-input-checkbox type01">
+                                        <input type="radio" id="platform6" value="10939" name="platform" v-model="form.IPT_11359">
+                                        <label for="platform6">없음</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">분야를 구체적으로 적어주세요 (중소기업, 벤처기업, 변호사, 병원, 세무, 자영업, 영업, 제조, 유통 등)</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="내용을 입력해주세요." v-model="form.IPT_11360">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">현재 월 매출 또는 수익 적어주세요 (없으면 없음 으로 기재)</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="내용을 입력해주세요." v-model="form.IPT_11361">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-form">
+                            <div class="m-input-wrap">
+                                <h3 class="title type01">그외에 마케팅에 대한 고민이나 심층 상담 시 다루었으면 하는 부분이 있다면 적어주세요.</h3>
+
+                                <div class="m-input-text">
+                                    <input type="text" placeholder="내용을 입력해주세요." v-model="form.IPT_11362">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-form">
                             <h3 class="title type01">개인정보 수집 및 이용에 대한 동의</h3>
 
                             <div class="box-privacy">(1) 수집하는 개인정보의 항목 및 수집방법
@@ -376,6 +447,7 @@
                         'IPT_10730',
                         'IPT_10731',
                         'IPT_10732',
+                        'IPT_11359',
                     ],
 
                     form: {
@@ -383,6 +455,7 @@
                         IPT_10730 : "",
                         IPT_10731 : "",
                         IPT_10732 : "",
+                        IPT_11359: "",
 
                         // 미필수
                         IPT_FO_10522 : "",
@@ -395,6 +468,9 @@
                         IPT_FO_10529 : "",
                         IPT_FO_10530 : "",
                         IPT_FO_10531 : "",
+                        IPT_11360 : "",
+                        IPT_11361 : "",
+                        IPT_11362 : "",
 
 
                         KEY: "kh9cdcbhv6t57glbq0doy65xadhd0fs4",
