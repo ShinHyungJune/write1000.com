@@ -19,12 +19,222 @@
     <div id="header"></div>
 
     <style>
+        .area-main { padding-top: 84px; }
+        .area-main p { color: #fff; text-align: center; font-size: 22px; line-height: 1.82; letter-spacing: -1px; word-break: keep-all; }
+        .area-main * { font-size: unset; font-weight: unset; }
+        .area-main .ft-22 { font-size: 22px; }
+        .area-main .ft-34 { font-size: 34px; line-height: 1.47; letter-spacing: -1px; }
+        .area-main .ft-50 { font-size: 50px; line-height: 1.12; letter-spacing: -1px; }
+        .area-main .bold { font-weight: bold; }
+        .area-main .yel { color: #ffe500; }
+        .area-main .ta-le { text-align: left; }
+        .area-main .yel-label { position: relative; padding-left: 22px; text-align: left; font-size: 34px; line-height: 1.47; font-weight: bold; }
+        .area-main .yel-label::before { position: absolute; left: 0; top: 10px; width: 4px; height: 30px; background-color: #ffe500; content: ''; }
+        .area-main img { max-width: 100%; }
+        @media screen and (max-width:1200px) {
+            .area-main p { font-size: 12px; }
+            .area-main .ft-22 { font-size: 12px; }
+            .area-main .ft-34 { font-size: 20px; }
+            .area-main .ft-50 { font-size: 24px; }
+            .area-main .yel-label { font-size: 20px; padding-left: 14px; }
+            .area-main .yel-label::before { width: 2px; top: 4px; height: 20px; }
+        }
 
+
+        .area-main .al-ct { text-align: center; }
+        .section1 .txt-1 {
+            font-size: 70px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+
+        .section1 .txt-1 span {
+            font-size: 70px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-align: center;
+            color: #FFE500;
+        }
+        .section1 .txt-2 { font-size: 22px; line-height: 1.82;
+            letter-spacing: -1px; color: #f5f5f5; 
+        }
+        .section1 .txt-3-wrap { padding: 96px 0; background-image: url(/imgs/index/section1-img.png); background-size: cover; background-position: center; }
+        .section1 .txt-3 { font-size: 40px; letter-spacing: -1px; text-shadow: 0 0 4px rgba(0, 0, 0, 0.8); }
+        .section1 .txt-4 { text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); font-size: 50px; font-weight: bold;  }
+        .section1 .txt-4 span { color: #ffe500; }
+        .section1 .txt-5 { font-size: 34px; font-weight: bold; line-height: 1.47;
+            letter-spacing: -1px; font-weight: normal; 
+        }
+        .section1 .txt-5 span { font-weight: bold; }
+        .section1 .txt-6 { font-size: 22px; line-height: 1.82; letter-spacing: -1px; color: #f5f5f5; }
+
+        @media screen and (max-width:1200px) {
+            .section1 .txt-1 { font-size: 24px; }
+            .section1 .txt-1 span { font-size: 24px; }
+            .section1 .txt-2 { font-size: 12px; }
+            .section1 .txt-3 { font-size: 24px; }
+            .section1 .txt-4 { font-size: 24px; }
+            .section1 .txt-5 { font-size: 24px; }
+            .section1 .txt-6 { font-size: 12px; }
+        }
+
+
+        .section2 { padding: 40px 0; background-color: rgba(255, 255, 255, 0.1); }
+        .section2 .txt-1 { font-size: 22px; line-height: 2.27; letter-spacing: -1px; color: #f5f5f5; }
+        .section2 .txt-1 span { font-size: 26px; font-weight: bold; color: #ffe500; }
+        @media screen and (max-width:1200px) {
+            .section2 .txt-1 { font-size: 12px; }
+            .section2 .txt-1 span { font-size: 14px; }
+        }
+
+        .section3 .img-wrap-1 { display: flex; gap: 16px; position: relative; }
+        .section3 .img-wrap-1::after { content: ''; width: 100%; height: 300px; bottom: 0; display: block; background-image: linear-gradient(to top, #191919, rgba(25, 25, 25, 0)); position: absolute; bottom: 0; left: 0; }
+        .section3 .img-wrap-1 > div { width: calc(100% - 16px / 2); display: flex; gap: 20px; flex-direction: column; }
+        .section3 .img-wrap-1 > div img { width: 100%; }
+
+        .section3 .txt-1 { font-size: 34px; line-height: 1.47; letter-spacing: -1px; color: #fff; }
+        .section3 .txt-1 span { font-weight: bold; color: #ffe500; }
+        .section3 .img-wrap-2 { display: flex; justify-content: center; }
+        .section3 .img-wrap-2 img { max-width: 100%; }
+        .section3 .txt-2 { font-size: 22px; line-height: 1.82; letter-spacing: -1px; color: #f5f5f5; }
+        @media screen and (max-width:1200px) {
+            .section3 .txt-1 { font-size: 24px; }
+            .section3 .txt-2 { font-size: 12px; }
+        }
+
+        .section4 { overflow: hidden; }
+        .section4 .txt-1 { font-size: 34px; font-weight: bold; line-height: 1.47; letter-spacing: -1px; }
+        .section4 .txt-1 span { color: #ffe500; }
+        .section4 .section4-swiper1 { width: 1100px; margin: 0 auto; max-width: 100%; }
+        .section4 .section4-swiper1 img { max-width: 100%; }
+        @media screen and (max-width:1200px) {
+            .section4 .txt-1 { font-size: 24px; }
+        }
+
+        .section5 .txt-1 { font-size: 34px; font-weight: bold; line-height: 1.47; letter-spacing: -1px; color: #ffe500; margin-bottom: 24px; }
+        .section5 .txt-1 span { color: #fff; font-weight: normal; }
+        .section5 .txt-2 { font-size: 22px; line-height: 1.82; letter-spacing: -1px; color: #f5f5f5; }
+        .section5 .img-wrap-1 { display: flex; justify-content: center; }
+        .section5 .img-wrap-1 img { max-width: 100%; }
+        .section5 .txt-3 { font-size: 22px; line-height: 1.82; letter-spacing: -1px; color: #f5f5f5; }
+        .section5 .txt-3 span { font-weight: bold; }
+        @media screen and (max-width:1200px) {
+            .section5 .txt-1 { font-size: 24px; }
+            .section5 .txt-2 { font-size: 12px; }
+            .section5 .txt-3 { font-size: 12px; }
+        }
+
+        .section6 { background-color: #292929; }
+        .section6 .txt-1 { font-size: 50px; font-weight: bold; line-height: 1.12; letter-spacing: -1px; }
+        .section6 .img-wrap-1 { display: flex; gap: 26px; }
+        .section6 img { max-width: 100%; }
+        .section6 .img-wrap-2 { gap: 20px; display: flex; }
+        .section6 .img-wrap-2 img { max-width: calc((100% - 20px) / 2); }
+        @media screen and (max-width:1200px) {
+            .section6 .txt-1 { font-size: 24px; }
+            .section6 .img-wrap-1 { flex-direction: column; align-items: center; }
+
+
+        }
+
+        .section7 { overflow: hidden; }
+
+
+        .section8 { background-color: #292929; }
+
+        .section9 .list-1 > ul { display: flex; gap: 30px; flex-direction: column; }
+        .section9 .list-1 > ul > li { display: flex; border-radius: 10px; background-color: rgba(255, 255, 255, 0.1); overflow: hidden; }
+        .section9 .list-1 > ul > li > a { display: flex; width: 100%; height: 100px; align-items: center; }
+        .section9 .list-1 > ul > li > a .logo { width: 100px; height: 100px; }
+        .section9 .list-1 > ul > li > a .title { width: 278px; font-size: 30px; }
+        .section9 .list-1 > ul > li > a .sub-title-wrap { width: calc(100% - 100px - 270px); padding-right: 35px; display: flex; align-items: center; justify-content: space-between; }
+        @media screen and (max-width:1200px) {
+            .section9 .list-1 > ul > li > a { height: 60px; }
+            .section9 .list-1 > ul > li > a .logo { width: 60px; height: 60px; }
+            .section9 .list-1 > ul > li > a .title { font-size: 20px; width: 170px; }
+            .section9 .list-1 > ul > li > a .sub-title-wrap { width: calc(100% - 60px - 170px); padding-right: 16px; }
+            .section9 .list-1 > ul > li > a .sub-title-wrap img { width: 16px; }
+        }
+
+        .section11 { background-color: #292929; }
+        .section12 .img-wrap { display: flex; justify-content: center; }
+
+        .section12 .list-1 > ul { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+        .section12 .list-1 > ul > li { padding: 27px 20px; background-color: #000; width: 768px; max-width: 100%; }
+
+        .section12 .txt-wrap-1 { padding: 30px 40px; background-color: #000; }
+
+        .youtube-wrap { position: relative; }
+        .youtube-wrap::before { content: ''; width: 100%; padding-top: 55.43%; display: block; }
+
+        .youtube-wrap > iframe { width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+
+        .section13 { background-color: #292929; }
+
+        .Case-item { width: 768px; border-radius: 10px; overflow: hidden; max-width: calc(100vw / 2); }
+        .Case-item .img-wrap { display: block; position: relative; width: 100%; background-color: #fff; }
+        .Case-item .img-wrap::before { content: ''; display: block; width: 100%; padding-top: 45.83%; }
+        .Case-item .img-wrap > img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+        .Case-item .title-wrap { background-color: #191919; padding: 20px; }
+
+        .section14 .img-wrap { display: flex; justify-content: center; }
+        .section14 .img-wrap img { max-width: 100%; }
+
+
+        .section15 { background-color: #000; }
+
+        .section16 .btn-wrap { display: flex; justify-content: center; padding: 0 20px; }
+        .section16 .yel-btn { width: 572px; height: 100px; border-radius: 100px; background-image: linear-gradient(279deg, #ffa621 111%, #ffe500 0%); display: flex; justify-content: center; align-items: center; color: #fff; }
+
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            /* margin: 0 auto; */
+        }
+
+        .banner {
+            display: flex;
+            gap: 16px;
+            animation: rollLeft 20s linear infinite;
+            width: max-content; /* 콘텐츠가 끝없이 이어지도록 설정 */
+        }
+
+
+        /* 왼쪽으로 롤링 */
+        .left-roll .banner {
+            animation: rollLeft 20s linear infinite;
+        }
+
+        @keyframes rollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* 오른쪽으로 롤링 */
+        .right-roll .banner {
+            animation: rollRight 20s linear infinite;
+        }
+
+        @keyframes rollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
     </style>
 
     <div class="contents-wrap">
         <div class="area-main">
-            <div class="section1 pt-120">
+            <div class="section1 pt-120 ptm-40">
                 <div class="content">
                     <p class="txt-1 mb-50 al-ct">우리는 편집을 하지 않습니다 <br>
                         <span>“기획을 합니다 .ˮ</span>
@@ -86,9 +296,9 @@
                 </div>
             </div>
 
-            <div class="section4 mb-100">
+            <div class="section4 mb-100 mbm-40">
                 <div class="content">
-                    <p class="txt-1 mb-70">
+                    <p class="txt-1 mb-70 mbm-40">
                         우리의 기획을 통해, 실질적인 수익으로 이어질 수 있는 <br>
                         <span>유입-DB 확보 전환의 흐름을 완성해 보세요!</span>
                     </p>
@@ -103,7 +313,7 @@
                 </div>
             </div>
 
-            <div class="section5 mb-90">
+            <div class="section5 mb-90 mbm-40">
                 <div class="content">
                     <p class="txt-1">
                         <span> “ 유입에서 전환까지 ,</span> <br>
@@ -123,9 +333,9 @@
                 </div>
             </div>
 
-            <div class="section6 pt-90 pb-90">
+            <div class="section6 pt-90 pb-90 pbm-40">
                 <div class="content">
-                    <p class="txt-1 mb-60">글천개콘텐츠는 이렇습니다!</p>
+                    <p class="txt-1 mb-60 mbm-20">글천개콘텐츠는 이렇습니다!</p>
 
                     <p class="txt-2 ft-34 mb-30">
                         500만 자영업자들이 보고, 유용한 노하우를 배울수 있는 유튜브채널인
@@ -159,7 +369,7 @@
                 </div>
             </div>
 
-            <div class="section7 pt-80 pt-90">
+            <div class="section7 pt-80 pt-90 ptm-40">
                 <div class="content">
                     <p class="ft-34 ta-le bold mb-40">
                         여러분도 할 수 있는 <br>
@@ -188,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="section8 pt-80 pb-80 mb-50">
+            <div class="section8 pt-80 pb-80 ptm-40 pbm-40">
                 <div class="content">
                     <p class="ft-34 bold mb-50">퍼널영상 프로세스</p>
                     <img src="/imgs/index/section8-img-1.png" class="mb-50" alt="">
@@ -199,11 +409,11 @@
                 </div>
             </div>
 
-            <div class="section9 pt-80">
+            <div class="section9 pt-80 ptm-40">
                 <div class="content">
                     <p class="ft-34 bold ta-le mb-40">글천개콘텐츠에서는 다양한 마케팅도 진행합니다.</p>
 
-                    <div class="list-1 mb-100">
+                    <div class="list-1 mb-100 mbm-80">
                         <ul>
                             <li>
                                 <a href="">
@@ -329,7 +539,7 @@
                 </div>
             </div>
 
-            <div class="section12 pt-100 pb-100">
+            <div class="section12 pt-100 pb-100 pbm-40">
                 <div class="content">
                     <p class="ft-34 mb-10 bold">생생한 충격후기! 사실이 아니면, 공개하지 않습니다.</p>
                     <p class="ft-34 mb-80">아래 내용은 100% 실제사례 후기입니다. 아닐시 법적 처벌을 받습니다</p>
@@ -352,8 +562,11 @@
                     <p class="ft-34 mb-10">다년간 쌓아온 기획력으로 고객에게 최대 매출을 선물합니다!</p>
                     <p class="ft-34 bold mb-80">당신도 미처 알지 못했던 장점&강점을 글천개팀은 100% 발굴합니다.</p>
 
-                    <div class="youtube-wrap">
-
+                    <div class="youtube-wrap mb-50">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
 
                     <div class="txt-wrap-1 mb-60">
@@ -368,14 +581,339 @@
                     </div>
 
                     
+                    <div class="txt-wrap-1">
+                        <p class="ft-34 mb-20">
+                            하루만에 전국에서 해당 분야에서 가장 유명해져 <br>
+                            물량이 없어 더 팔 수 도 없는 상태가 되었습니다. <br>
+                            <br>
+                            이유는? <br>
+                            대표와 사업체가 가진 것 중 가장 좋은 걸 길어올려 그것을 재료로 <br>
+                            매출이 폭증하는 영상으로 브랜딩했기 때문입니다. 
+                        </p>
+                        <p class="ft-34 yel">
+                            신규유입 , 브랜드 파워 , 매출 폭증 이 세 가지를 모두 3일만에 이루었고 <br>
+                            비슷한 사례를 다수 보유중입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="section13 pt-90 pb-80 ptm-40 pbm-40">
+            
+                <p class="ft-50 mb-60 bold">글천개 팀 사례</p>
+                <p class="ft-34 mb-50 bold">
+                    현재 <span class="yel">연 매출 20억, 100억, 200억대 중소기업 브랜드 마케팅</span>과 <br>
+                    <span class="yel">수천만원에서 수억원대 소상공인, 자영업자 분들의</span><br>
+                    <span class="yel">브랜드 마케팅</span>을 진행하고 있습니다.
+                </p>
+                <p class="ft-34 mb-70">
+                    아래는 그 과정 중 일부 과정만 빠르게 보여드리기 위해 <br>
+                    수백 개의 사례 중 단순한 것들만 일부 발췌했습니다.
+                </p>
+            
+                
+
+                <div class="banner-container left-roll mb-50">
+                    <div class="banner">
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img06.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1회 촬영으로 영상 4개 제작</p>
+                                    <p class="ft-34 yel">조회수 21만회 돌파!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img07.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">조회수 평균 1~2천회 채널 -> 8만회 돌파</p>
+                                    <p class="ft-34 yel">조회수 40배 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img08.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1회 촬영으로 영상 10개 제작</p>
+                                    <p class="ft-34 yel">조회수 10만회 돌파!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img06.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1회 촬영으로 영상 4개 제작</p>
+                                    <p class="ft-34 yel">조회수 21만회 돌파!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img07.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">조회수 평균 1~2천회 채널 -> 8만회 돌파</p>
+                                    <p class="ft-34 yel">조회수 40배 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img08.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1회 촬영으로 영상 10개 제작</p>
+                                    <p class="ft-34 yel">조회수 10만회 돌파!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-container right-roll">
+                    <div class="banner">
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img01.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 52,000명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img02.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">구독자 9천명에서 2.8만명으로</p>
+                                    <p class="ft-34 yel">1.9만명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img03.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 7,400명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img04.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 5,700명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img05.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 4,900명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img01.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 52,000명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img02.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">구독자 9천명에서 2.8만명으로</p>
+                                    <p class="ft-34 yel">1.9만명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img03.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 7,400명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img04.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 5,700명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-item">
+                            <div class="Case-item">
+                                <div class="img-wrap">
+                                    <img src="/imgs/index/img05.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <p class="ft-34">1영상으로</p>
+                                    <p class="ft-34 yel">구독자 4,900명 증가!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section14 pt-100 pb-100 ptm-40 pbm-40">
+                <div class="content">
+                    <p class="ft-50 bold mb-50">업계 최초 <span class="yel">영업 세일즈 솔루션 출시!</span></p>
+                    <div class="img-wrap mb-40">
+                        <img src="/imgs/index/section14-img.png" alt="">
+                    </div>
+                    <p class="ft-34 bold mb-10">
+                        영업에 딱 필요한 <span class="yel">프리미엄 솔루션</span>이 <br>
+                        이제 곧 출시됩니다!
+                    </p>
+                    <p class="">✓ 2025년 1월 정식 출시 예정!</p>
+                    <p class="yel">사전 체험 기회 🎉 딱 2분의 대표님을 위한 베타테스트 모집 중!</p>
+                </div>
+            </div>
+
+            <div class="section15 pt-60 pb-70 ptm-40 pbm-40">
+                <div class="content type2">
+                    <p class="ft-34 bold ta-le">글천개 콘텐츠 영업이사 <span class="yel">갱부장님</span>의</p>
+                    <p class="ft-34 bold ta-le mb-10"><span class="yel">누적 3,000억 매출 영업 노하우</span>를 이 서비스에 모두 담았습니다.</p>
+                    <p class="mb-30 ta-le">성과로 입증된 저희의 밀착 솔루션으로 매출이 나오지 않으면 100% 책임 지겠습니다.</p>
+                    <p class="ta-le">👉 단 두 분만을 위한 특별 혜택!</p>
+                    <p class="ta-le mb-30">지금 바로 아래 신청란에서 베타테스트 신청하세요.</p>
+
+                    <div class="img-wrap mb-60">
+                        <img src="/imgs/index/section15-img.png" alt="">
+                    </div>
+
+                    <p class="yel-label ta-le mb-20">고객후기</p>
+                    <p class="mb-10 bold ta-le">[고객 A]</p>
+                    <p class="mb-20 ta-le">
+                        “이전에는 조회수만 많고 매출이 부족했는데, 이제 전환율이 눈에 띄게 개선되면서 실제 매출로 이어지고 있습니다. <br>
+                        단순한 조회수가 아닌 실질적인 성과를 경험중입니다.”
+                    </p>
+                    <p class="mb-10 bold ta-le">[고객 B]</p>
+                    <p class="mb-70 ta-le">
+                        “처음엔 조회수만 높여주는 서비스인 줄 알았는데, 실제로 DB 확보와 매출 전환까지 지원해 주어 <br>
+                        우리 브랜드 성장에 큰 도움이 되었습니다.”
+                    </p>
+
+                    <p class="yel-label ta-le mb-20">브랜딩&컨설팅 사례</p>
+                    <p class="mb-10 ta-le"><span class="bold">-중소기업</span> : 각 분야 제조, 유통, 판매, 수출 등</p>
+                    <p class="ta-le">-법무법인, 병원, 세무, 요식업, 렌터카, 작가, 인테리어, 베이커리, 피트니스, 유아용품, 쥬얼리, 악세사리, 의류업, 가구, 면접, 육아, 교수, 마케팅, 영업 등 </p>
+                </div>
+            </div>
+
+            <div class="section16 pt-100 pb-140 ptm-40 pbm-80">
+                <p class="ft-34 mb-70 mbm-40">믿고 선택해주신 <span class="yel">파트너들을 소개합니다</span></p>
+                <div class="banner-container left-roll mb-30">
+                    <div class="banner">
+                        <img src="/imgs/index/roll-logo01.png" alt="">
+                        <img src="/imgs/index/roll-logo02.png" alt="">
+                        <img src="/imgs/index/roll-logo03.png" alt="">
+                        <img src="/imgs/index/roll-logo04.png" alt="">
+                        <img src="/imgs/index/roll-logo05.png" alt="">
+                        <img src="/imgs/index/roll-logo06.png" alt="">
+                        <!--  -->
+                        <img src="/imgs/index/roll-logo01.png" alt="">
+                        <img src="/imgs/index/roll-logo02.png" alt="">
+                        <img src="/imgs/index/roll-logo03.png" alt="">
+                        <img src="/imgs/index/roll-logo04.png" alt="">
+                        <img src="/imgs/index/roll-logo05.png" alt="">
+                        <img src="/imgs/index/roll-logo06.png" alt="">
+                    </div>
+                </div>
+                <div class="banner-container right-roll mb-30">
+                    <div class="banner">
+                        <img src="/imgs/index/roll-logo07.png" alt="">
+                        <img src="/imgs/index/roll-logo08.png" alt="">
+                        <img src="/imgs/index/roll-logo09.png" alt="">
+                        <img src="/imgs/index/roll-logo10.png" alt="">
+                        <img src="/imgs/index/roll-logo11.png" alt="">
+                        <img src="/imgs/index/roll-logo12.png" alt="">
+                        <img src="/imgs/index/roll-logo13.png" alt="">
+                        <img src="/imgs/index/roll-logo14.png" alt="">
+                        <!--  -->
+                        <img src="/imgs/index/roll-logo07.png" alt="">
+                        <img src="/imgs/index/roll-logo08.png" alt="">
+                        <img src="/imgs/index/roll-logo09.png" alt="">
+                        <img src="/imgs/index/roll-logo10.png" alt="">
+                        <img src="/imgs/index/roll-logo11.png" alt="">
+                        <img src="/imgs/index/roll-logo12.png" alt="">
+                        <img src="/imgs/index/roll-logo13.png" alt="">
+                        <img src="/imgs/index/roll-logo14.png" alt="">
+                    </div>
+                </div>
+                <div class="banner-container left-roll mb-130 mbm-80">
+                    <div class="banner">
+                        <img src="/imgs/index/roll-logo15.png" alt="">
+                        <img src="/imgs/index/roll-logo16.png" alt="">
+                        <img src="/imgs/index/roll-logo17.png" alt="">
+                        <img src="/imgs/index/roll-logo18.png" alt="">
+                        <img src="/imgs/index/roll-logo19.png" alt="">
+                        <img src="/imgs/index/roll-logo20.png" alt="">
+                        <img src="/imgs/index/roll-logo21.png" alt="">
+                        <!--  -->
+                        <img src="/imgs/index/roll-logo15.png" alt="">
+                        <img src="/imgs/index/roll-logo16.png" alt="">
+                        <img src="/imgs/index/roll-logo17.png" alt="">
+                        <img src="/imgs/index/roll-logo18.png" alt="">
+                        <img src="/imgs/index/roll-logo19.png" alt="">
+                        <img src="/imgs/index/roll-logo20.png" alt="">
+                        <img src="/imgs/index/roll-logo21.png" alt="">
+                    </div>
+                </div>
+
+                <p class="mb-30 ft-50 bold yel">한 달에 딱! 3팀만 받습니다.</p>
+                <p class="mb-80 ft-50 bold">조회수를 매출로 바꿀 기획을 시작하세요.</p>
+
+                <div class="btn-wrap">
+                    <a href="" class="yel-btn ft-34 bold">지금 무료 상담 신청하기</a>
                 </div>
             </div>
         </div>
-
-
-
-    </div>
     </div>
 
     <div id="footer"></div>
@@ -402,9 +940,64 @@
         });
 
         var swiper = new Swiper(".section11-swiper1", {
-            slidesPerView: 4,
-            spaceBetween: 20,
+                slidesPerView: 4,
+                spaceBetween: 20,
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+
+        var swiper = new Swiper(".section13-swiper1", {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            speed: 2500,
+            loop: true, // 무한 스크롤
+
+            autoplay: {
+                delay: 0,
+            },
         });
+    </script>
+    <script>
+        const bannerList = document.querySelector('.banner_list');
+        const bannerItems = document.querySelectorAll('.banner');
+        const numBanners = bannerItems.length; // 총 배너의 갯수를 변수에 담기
+
+        // 선택된 배너의들을 복제해서 뒤에 이어 붙이기 
+        for (let i = 0; i < numBanners; i++) {
+            bannerList.appendChild(bannerItems[i].cloneNode(true));
+        }
+
+        // 배너 하나의 너비를 계산한다.
+        const bannerWidth = bannerItems[0].offsetWidth;
+        // 배너 리스트의 너비를 설정한다.
+        bannerList.style.width = `${bannerWidth * numBanners * 2 + 10 * (numBanners * 2 - 1)}px`;
+
+        // 현재 배너 위치와 마지막으로 애니메이션을 실행한 시간을 저장하는 변수를 초기화
+        let currentPos = 0;
+        let lastTime = 0;
+
+        // 애니메이션을 실행하는 함수를 정의
+        function animate(timestamp) {
+            // 마지막으로 애니메이션을 실행한 시간과 현재 시간 사이의 차이를 계산
+            const delta = timestamp - lastTime;
+            lastTime = timestamp;
+
+            // 배너 리스트를 이동시킬 거리를 계산
+            currentPos -= (bannerWidth + 10) * delta / 1000;
+            // 만약 배너 리스트가 전부 왼쪽으로 이동했다면, 처음 위치로 이동
+            if (currentPos <= -(bannerWidth + 10) * numBanners) {
+                currentPos = 0;
+            }
+            // 배너 리스트를 이동
+            bannerList.style.transform = `translateX(${currentPos}px)`;
+
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
     </script>
 </body>
 

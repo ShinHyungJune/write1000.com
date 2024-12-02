@@ -35,7 +35,7 @@
 /* 이 코드는 올리용 종료 */
 
 .content { margin: 0 auto; width: 1200px; padding: 0 20px; max-width: 100%; }
-
+.content.type2 { width: 1080px; }
 
 @font-face{
     font-family:'bitbit';
