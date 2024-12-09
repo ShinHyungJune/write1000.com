@@ -243,10 +243,49 @@
                 transform: translateX(0);
             }
         }
+
+        .consultationInquiry-bar { width: 1160px; max-width: calc(100vw - 40px); height: 80px; display: flex; position: fixed; left: 50%; bottom: 50px; transform: translateX(-50%); border-radius: 100px; box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.8); background: linear-gradient(90deg, rgba(255,229,0,1) 0%, rgba(255,166,33,1) 100%); z-index: 10; }
+        .consultationInquiry-bar .title-wrap { width: calc(100% - 172px); display: flex; justify-content: space-between; align-items: center; padding: 16px 30px 16px 50px; }
+        .consultationInquiry-bar .title-wrap .title-wrap-le { font-size: 18px; font-weight: bold; line-height: 1.22; letter-spacing: -1px; color: #191919; }
+        .consultationInquiry-bar .title-wrap .title-wrap-ri { display: flex; }
+        .consultationInquiry-bar .title-wrap .title-wrap-ri p { font-size: 22px; letter-spacing: -1px; color: #000; }
+        .consultationInquiry-bar .title-wrap .title-wrap-ri span { font-weight: bold; }
+        .consultationInquiry-bar .btn-wrap { width: 172px; }
+        .consultationInquiry-bar .btn-wrap > a { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; border-radius: 100px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.24); background-color: #fff;  font-size: 20px; font-weight: bold; color: #f7a300; letter-spacing: -1px; }
+        @media screen and (max-width:968px) {
+            .consultationInquiry-bar { height: 48px; bottom: 10px; }
+            .consultationInquiry-bar .title-wrap { padding: 20px; width: calc(100% - 100px); }
+            .consultationInquiry-bar .title-wrap .title-wrap-le { font-size: 12px; }
+            /* .consultationInquiry-bar .title-wrap .title-wrap-le { display: none; } */
+            .consultationInquiry-bar .title-wrap .title-wrap-ri p { font-size: 14px; }
+            .consultationInquiry-bar .btn-wrap { width: 100px; }
+            .consultationInquiry-bar .btn-wrap > a { font-size: 16px; }
+        }
+        @media screen and (max-width:680px) {
+            .consultationInquiry-bar .title-wrap .title-wrap-le { display: none; }
+        }
+
     </style>
 
     <div class="contents-wrap">
         <div class="area-main">
+
+            <div class="consultationInquiry-bar">
+                <div class="title-wrap">
+                    <div class="title-wrap-le">
+                        정말 간절하신가요? <br>
+                        아이템은 있는데 성과가 없으신가요?
+                    </div>
+                    <div class="title-wrap-ri">
+                        <p>지금 바로 <span> 무료 상담 신청하세요!</span></p>
+                        <i class="xi-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <a href="/form/add.php?M2_IDX=33383">상담문의</a>
+                </div>
+            </div>
+
             <div class="section1 pt-120 ptm-40">
                 <div class="content">
                     <p class="txt-1 mb-30 al-ct">우리는 편집을 하지 않습니다 <br>
