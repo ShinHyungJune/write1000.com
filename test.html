@@ -1,0 +1,71 @@
+<table class="mboard-ts-add">
+    <tbody>
+
+    <tr>
+        <th>회사명/단체명</th>
+        <td><input type="text" id="COV_ORG" name="COV_ORG" maxlength="100" class="ips1" wrap="fd_itm" req="" fdname="회사명/단체명" placeholder="회사명을 입력해주세요."></td>
+    </tr>
+
+    <tr>
+        <th>이름</th>
+        <td><input type="text" id="COV_CHARGE" name="COV_CHARGE" maxlength="100" class="ips1" wrap="fd_itm" req="Y" fdname="이름" placeholder="이름을 입력해주세요."></td>
+    </tr>
+
+    <tr>
+        <th>전화번호</th>
+        <td><input type="text" id="COV_TEL" name="COV_TEL" maxlength="100" class="ips1" wrap="fd_itm" req="" fdname="전화번호" placeholder="연락처를 입력해주세요."></td>
+    </tr>
+
+    <tr>
+        <th>이메일</th>
+        <td><input type="text" id="COV_EMAIL" name="COV_EMAIL" maxlength="100" class="ips1" wrap="fd_itm" req="Y" fdname="이메일" placeholder="이메일을 입력해주세요."></td>
+    </tr>
+
+    <tr>
+        <th>성별</th>
+        <td><span class="dsIB">
+                        <input type="radio" id="COV_SEX1" name="COV_SEX" value="M" class="fill" wrap="fd_itm"> <label for="COV_SEX1">
+                            <span class="radio"><span></span></span>
+                            <span class="txt">개인정보 취급정책에 동의합니다.</span>
+                        </label>
+                    </span>
+            <span class="dsIB">
+                        <input type="radio" id="COV_SEX2" name="COV_SEX" value="F" class="fill" wrap="fd_itm"> <label for="COV_SEX2">
+                            <span class="radio"><span></span></span>
+                            <span class="txt">개인정보 취급정책에 동의합니다.</span>
+                        </label>
+                    </span></td>
+    </tr>
+
+    <tr>
+        <th>연령</th>
+        <td><input type="number" id="COV_AGE" name="COV_AGE" min="1" max="1000" class="ips1 ws" wrap="fd_itm" req="" fdname="연령"></td>
+    </tr>
+
+    <tr>
+        <th>내용</th>
+        <td><textarea id="COV_CONTENT" name="COV_CONTENT" class="ips1" style="min-height:100px" wrap="fd_itm" req="Y" fdname="내용" placeholder="내용을 입력해주세요."></textarea></td>
+    </tr>
+
+    <tr>
+        <th>개인정보취급정책 동의여부</th>
+        <td><textarea id="_COV_POLICY_" name="_COV_POLICY_" class="ips1" style="min-height:100px;line-height:2;" readonly="">(1) 수집하는 개인정보의 항목 및 수집방법
+- 수집하는 개인정보의 항목 : {이메일 주소, 또는 휴대폰번호}
+- 개인정보수집방법: 문의 및 상담하려는 이용자가 입력하는 경우에만 수집하게 됩니다.
+(2) 개인정보 수집 및 이용목적
+- {회사명}은(는) 수집된 개인정보는 문의 및 상담 요청에 대해 회신을 드리거나 회신을 위한 서비스 이용기록 조희를 위하여 활용합니다.
+(3) 개인정보의 보유 및 이용기간
+-수집된 이메일 주소, 휴대폰 번호는 관련 법령에 달리 명시되어 있지 않는 한, 문의 처리 후 {1}년간 보관합니다.</textarea>
+            <div style="padding:4px 0;">
+                    <span class="dsIB">
+                        <input type="checkbox" id="COV_POLICY" name="COV_POLICY" value="Y" class="fill">
+                        <label for="COV_POLICY">
+                            <span class="check"><span class="ico_check"></span></span>
+                            <span class="txt">개인정보 취급정책에 동의합니다.</span>
+                        </label>
+                    </span>
+            </div></td>
+    </tr>
+
+    </tbody>
+</table>
